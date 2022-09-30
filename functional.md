@@ -29,7 +29,7 @@
 
 <a  name="overview"/></a>
 
-SignAll want to invent a new product which would allow them to control the luminous display of the signs they propose from a distance but also to know the state of the LEDs. The objective behind this project is to enable the company to save on electricity and reduce its ecological footprint.
+SignAll wants to invent a new product which would allow them to control the luminous display of the signs they propose remotly and to know the state of the LEDs. The objective behind this project is to enable the company to save on electricity and reduce its ecological footprint.
 
 <a  name="scenario"/></a>
 
@@ -91,7 +91,7 @@ To more security, to access our project the user needs to connect itself with :
 
 ### Home page
 To avoid any mistakes we will display the home page according to the login entered.
-- If the user is connected as a member of the maintenance team, he will see the state of all the signages.
+- If the user is connected as a member of the maintenance team, he will see the state of all the signages and thier LEDs.
 - If the user is connected as owner of the place where the signage is, he will be able to control the LEDs of his panel. He can not have access to the other brand signage.
 Then they will find a all the commands they can use and their description :
 ## (table)
