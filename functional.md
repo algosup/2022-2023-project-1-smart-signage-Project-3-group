@@ -16,7 +16,7 @@
 -  [Non goals](#non-goals)
   
 
--  [About the laws](#law)
+-  [Risks and assumptions (or requirements)](#risk)
 
 
 -  [Error reporting](#error)
@@ -42,26 +42,33 @@ Scenario 2 : Paul who is a member of the maintenance team. He would like to know
 The two most important points for our customers are its ecological impact and its electricity consumption. To answer his needs we can develop some feature. He ask for remote control too.
 To reduce his electricity consumption :
 
-- Close the light when the shop is close
-- in accord to the electricity price, close the light
+- Turn on the light
+- Turn off the light
+- In accord to the electricity price, turn off or reduce the light
 - Reduce the light intensity
 - Know the led status and control it remotly
-- Close the light in accord with the law
-- Send a notif when a led is off
-- programable light wich light up on various hours (out of scope)
+- turn off the light in accord with the law
+- Send a notif when a led is down (out of scope)
+- Programable light wich light up on various hours (out of scope)
 
 
-<a  name="non-goals"/></a>
+<!-- <a  name="non-goals"/></a>
 
 This version will not support the following feature:
-- An application to manage light panels.
+- An application to manage light panels. -->
 
-<a name="law"/></a>
+<a name="risk"/></a>
 
-To follow the law the LEDs must be off during the night, between 1:00AM and 6:00AM.
+### About the laws
+According to the law the LEDs must be off during the night, between 1:00AM and 6:00AM.
 
 ## Need to verify what the law tells about this type of project.
--> carte météo, affichage publicitaire la nuit
+
+### Energy crisis (out of scope ?)
+According to the energy crisis, a new tool will maybe appears to keep up to date about the level of electricity available in France in real time. It is called "carte météo de l'éléctricité".
+It will be important to program the LEDs according to the estimates of this card.
+
+
 ## Check privacy
 
 <a name="error"/></a>
@@ -104,5 +111,5 @@ We will use all the features mentioned above to develop our web interface.
 <!-- Questions
 - même interface pour maintenance -> login
 - qui sont les clients et les différences en conséquences 
-- vérifier les entrées du login pour être le plus clair : intitulé du job, entreprise... ?
+- vérifier les entrées du login pour être le plus clair : intitulé du job, entreprise, user title... ?
         -> changer les "owner" en conséquence-->
