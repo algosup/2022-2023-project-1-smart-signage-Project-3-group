@@ -22,7 +22,7 @@
 -  [Terminal](#terminal)
 
 
--  [out-of-scope](#out-of-scope)
+-  [Out of scope](#out-of-scope)
 
 
 <a  name="overview"/></a>
@@ -62,9 +62,9 @@ To reduce his electricity consumption :
 ### About the laws
 According to the law the LEDs must be off during the night, between 1:00AM and 6:00AM.
 
-## Need to verify what the law tells about this type of project.
+<!-- ## Need to verify what the law tells about this type of project. -->
 
-### Energy crisis (out of scope ?) (requirments)
+### Energy crisis <!--(out of scope ?) (requirements) -->
 According to the energy crisis, a new tool will maybe appears to keep up to date about the level of electricity available in France in real time. It is called "carte météo de l'éléctricité".
 It will be important to program the LEDs according to the estimates of this card.
 
@@ -76,7 +76,9 @@ It will be important to program the LEDs according to the estimates of this card
 ## Error reporting
 
 If an error occurs, a text will appear in the terminal. The error message may be different depending on the error encountered.
-## (table)
+
+<!-- make a table -->
+
 - Can not execute the command -> command not found
 
 <a name="terminal"/></a>
@@ -98,7 +100,9 @@ To avoid any mistakes we will display the home page according to the login enter
 - If the user is connected as a member of the maintenance team, he will see the state of all the signages and thier LEDs.
 - If the user is connected as owner of the place where the signage is, he will be able to control the LEDs of his panel. He can not have access to the other brand signage.
 Then they will find a all the commands they can use and their description :
-## (table)
+
+<!-- make a table -->
+
 - check -> Check the state of the LEDs (maintenance team)
 - off -> Turn off the LEDs (owner)
 - on -> Turn on the LEDs (owner)
