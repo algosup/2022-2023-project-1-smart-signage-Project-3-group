@@ -13,31 +13,35 @@
 -  [Requirements](#needs)
 
 
--  [Non goals](#non-goals)
-  
-
--  [Risks and assumptions (or requirements)](#risk)
+-  [Risks and assumptions](#risk)
 
 
 -  [Error reporting](#error)
 
 
--  [Home page](#terminal)
+-  [Terminal](#terminal)
 
 
--  [Home page](#out-of-scope)
+-  [out-of-scope](#out-of-scope)
+
 
 <a  name="overview"/></a>
 
+## Introduction
+
 SignAll wants to invent a new product which would allow them to control the luminous display of the signs they propose remotly and to know the state of the LEDs. The objective behind this project is to enable the company to save on electricity and reduce its ecological footprint.
 
-<a  name="scenario"/></a>
+<a name="scenario"/></a>
+
+## Scenario
 
 Scenario 1 : Patrick, the Burger King owner who wants to save money and is concerned about the environment.
 
 Scenario 2 : Paul who is a member of the maintenance team. He would like to know the status of the LEDs and be able to control them remotely.
 
-<a  name="needs"/></a>
+<a name="needs"/></a>
+
+## Requirements
 
 The two most important points for our customers are its ecological impact and its electricity consumption. To answer his needs we can develop some feature. He ask for remote control too.
 To reduce his electricity consumption :
@@ -51,20 +55,16 @@ To reduce his electricity consumption :
 - Send a notif when a led is down (out of scope)
 - Programable light wich light up on various hours (out of scope)
 
-
-<!-- <a  name="non-goals"/></a>
-
-This version will not support the following feature:
-- An application to manage light panels. -->
-
 <a name="risk"/></a>
+
+## Risks and assumptions
 
 ### About the laws
 According to the law the LEDs must be off during the night, between 1:00AM and 6:00AM.
 
 ## Need to verify what the law tells about this type of project.
 
-### Energy crisis (out of scope ?)
+### Energy crisis (out of scope ?) (requirments)
 According to the energy crisis, a new tool will maybe appears to keep up to date about the level of electricity available in France in real time. It is called "carte météo de l'éléctricité".
 It will be important to program the LEDs according to the estimates of this card.
 
@@ -73,11 +73,15 @@ It will be important to program the LEDs according to the estimates of this card
 
 <a name="error"/></a>
 
+## Error reporting
+
 If an error occurs, a text will appear in the terminal. The error message may be different depending on the error encountered.
 ## (table)
 - Can not execute the command -> command not found
 
 <a name="terminal"/></a>
+
+## Terminal
 
 Displayed when the terminal is open, the home page serves three purposes:
 
