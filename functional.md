@@ -1,10 +1,6 @@
----
-<h1 style="text-align: center;"> Smart Signage </h1>
-<p style="text-align: center;"> Functional Specification </br>
-Karine Vinette, Paul Nowak, Thomas Planchard, Victor Leroy, Laura-Lee Hollande </br>
-Last Update : October 3, 2022
-</P> </br>
----
+# Smart Signage 
+<sub> Last update : October 3, 2022   
+Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak, Laura-Lee Hollande</sub>
 
 ## Table of Contents
 
@@ -39,9 +35,9 @@ Last Update : October 3, 2022
 
 ## Scenario
 
-<u> Scenario 1 </u> : Patrick is the owner of a Burger King restaurant. He is concerned about the environment and wants to save energy this winter. He would like to be able to control the consumption of his signs and add options to save money. 
+**Scenario 1** : Patrick is the owner of a Burger King restaurant. He is concerned about the environment and wants to save energy this winter. He would like to be able to control the consumption of his signs and add options to save money. 
 
-<u> Scenario 2 </u> : Paul is a member of the maintenance team. He would like to know the status of the LEDs and be able to control them remotely to know when to move and intervene. This would avoid unnecessary travel.
+**Scenario 2** : Paul is a member of the maintenance team. He would like to know the status of the LEDs and be able to control them remotely to know when to move and intervene. This would avoid unnecessary travel.
 
 <a name="needs"/></a>
 
