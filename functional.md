@@ -43,17 +43,17 @@ Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak, Laura-Lee Hollande</s
 
 ## Requirements
 
-The two most important points for our customers are its ecological impact and its electricity consumption. To answer his needs we can develop some feature. He ask for remote control too.
-To reduce his electricity consumption :
+The most important points for our customers are its ecological impact, its electricity consumption and a remote controlits electricity consumption. To answer his needs we can develop some features.
 
 - Turn on the light
 - Turn off the light
 - In accord to the electricity price, turn off or reduce the light
 - Reduce the light intensity
+- Increase the light intensity
 - Know the led status and control it remotly
 - turn off the light in accord with the law
-- Send a notif when a led is down (out of scope)
-- Programable light wich light up on various hours (out of scope)
+- Send a notif when a led is down <!-- (out of scope) -->
+- Programable light wich light up on various hours <!-- (out of scope) -->
 
 <a name="risk"/></a>
 
@@ -69,7 +69,7 @@ According to the energy crisis, a new tool will maybe appears to keep up to date
 It will be important to program the LEDs according to the estimates of this card.
 
 
-## Check privacy
+<!-- ## Check privacy -->
 
 <a name="error"/></a>
 
