@@ -33,6 +33,10 @@ Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak, Laura-Lee Hollande</s
 
 <a name="scenario"/></a>
 
+## Budget
+
+Need to be complete
+
 ## Scenario
 
 **Scenario 1** : Patrick is the owner of a Burger King restaurant. He is concerned about the environment and wants to save energy this winter. He would like to be able to control the consumption of his signs and add options to save money. 
