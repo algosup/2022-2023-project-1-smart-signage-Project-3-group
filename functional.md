@@ -1,6 +1,10 @@
-# Functionnal specifications
-
-- name and role
+---
+<h1 style="text-align: center;"> Smart Signage </h1>
+<p style="text-align: center;"> Functional Specification </br>
+Karine Vinette, Paul Nowak, Thomas Planchard, Victor Leroy, Laura-Lee Hollande </br>
+Last Update : October 3, 2022
+</P> </br>
+---
 
 ## Table of Contents
 
