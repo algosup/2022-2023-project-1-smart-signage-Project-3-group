@@ -29,15 +29,15 @@
 
 ## Introduction
 
-SignAll wants to invent a new product which would allow them to control the luminous display of the signs they propose remotly and to know the state of the LEDs. The objective behind this project is to enable the company to save on electricity and reduce its ecological footprint.
+[SignAl](https://signall.com/) wants to invent a new product which would allow them to control the luminous display of the signs they propose remotly and to know the state of the LEDs. The objective behind this project is to enable the company to save on electricity and reduce its ecological footprint.
 
 <a name="scenario"/></a>
 
 ## Scenario
 
-Scenario 1 : Patrick, the Burger King owner who wants to save money and is concerned about the environment.
+<u> Scenario 1 </u> : Patrick is the owner of a Burger King restaurant. He is concerned about the environment and wants to save energy this winter. He would like to be able to control the consumption of his signs and add options to save money. 
 
-Scenario 2 : Paul who is a member of the maintenance team. He would like to know the status of the LEDs and be able to control them remotely.
+<u> Scenario 2 </u> : Paul is a member of the maintenance team. He would like to know the status of the LEDs and be able to control them remotely to know when to move and intervene. This would avoid unnecessary travel.
 
 <a name="needs"/></a>
 
@@ -77,9 +77,9 @@ It will be important to program the LEDs according to the estimates of this card
 
 If an error occurs, a text will appear in the terminal. The error message may be different depending on the error encountered.
 
-<!-- make a table -->
-
-- Can not execute the command -> command not found
+| Error             	| Description                 	|
+|-------------------	|-----------------------------	|
+| command not found 	| Can not execute the command 	|
 
 <a name="terminal"/></a>
 
@@ -99,15 +99,15 @@ To more security, to access our project the user needs to connect itself with :
 To avoid any mistakes we will display the home page according to the login entered.
 - If the user is connected as a member of the maintenance team, he will see the state of all the signages and thier LEDs.
 - If the user is connected as owner of the place where the signage is, he will be able to control the LEDs of his panel. He can not have access to the other brand signage.
-Then they will find a all the commands they can use and their description :
+Then they will find all the commands they can use and their description :
 
-<!-- make a table -->
-
-- check -> Check the state of the LEDs (maintenance team)
-- off -> Turn off the LEDs (owner)
-- on -> Turn on the LEDs (owner)
-- up -> increase the intensity of the LEDs (owner)
-- down -> decrease the intensity of the LEDs (owner)
+| Commands 	| Description                        	| Access restricted to           	|
+|----------	|------------------------------------	|--------------------------------	|
+| check    	| Check the state of the LEDs        	| Maintenance team               	|
+| off      	| Turn off the LEDs                  	| The brand where the signage is 	|
+| on       	| Turn on the LEDs                   	| The brand where the signage is 	|
+| up       	| Increase the intensity of the LEDs 	| The brand where the signage is 	|
+| down     	| Decrease the intensity of the LEDs 	| The brand where the signage is 	|
 
 <a name="out-of-scope"/></a>
 
