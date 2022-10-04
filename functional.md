@@ -1,6 +1,7 @@
 # Smart Signage 
-<sub> Last update : October 3, 2022   
-Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak, Laura-Lee Hollande</sub>
+<sub> Last update : October 3, 2022  
+Author : Laura-Lee
+Team : Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak, Hollande</sub>
 
 ## Table of Contents
 
@@ -32,6 +33,16 @@ Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak, Laura-Lee Hollande</s
 [SignAl](https://signall.com/) wants to invent a new product which would allow them to control the luminous display of the signs they propose remotly and to know the state of the LEDs. The objective behind this project is to enable the company to save on electricity and reduce its ecological footprint.
 
 <a name="scenario"/></a>
+
+## Glossary
+
+| Word                         	| Definition                                                                                                                                                                                                                                                                                                                                                                      	|
+|------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| LoRa                         	| It is a physical proprietary radio communication technique                                                                                                                                                                                                                                                                                                                      	|
+| Gateway                      	| It is a piece of networking hardware or software used in telecommunications networks that allows data to flow from one discrete network to another                                                                                                                                                                                                                              	|
+| LEDs                         	| It is a semiconductor light source that emits light when current flows through it.  Consumes 10 times less electricity than an incandescent bulb and 6 to 8 times less than a halogen bulb                                                                                                                                                                                      	|
+| Signage                      	| Commercial or public display signs                                                                                                                                                                                                                                                                                                                                              	|
+| Carte météo de l'électricité 	| A map that will inform in real time about the level of electricity available in the country, thanks to a map of France established by the [Ecowatt](https://www.monecowatt.fr/) device.  Green for a normal situation, orange for a tense electrical situation and red for a very tense situation synonymous with inevitable blackouts if nothing is done to reduce consumption
 
 ## Budget
 
