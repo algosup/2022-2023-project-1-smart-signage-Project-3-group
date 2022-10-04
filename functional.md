@@ -1,7 +1,7 @@
 # Smart Signage 
 <sub> Last update : October 4, 2022  
-Author : Laura-Lee
-Team : Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak, Hollande</sub>
+Author : Laura-Lee Hollande
+Team : Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak</sub>
 
 ## Table of Contents
 
@@ -75,7 +75,6 @@ According to the law the LEDs must be off during the night, between 1:00AM and 6
 ### Energy crisis <!--(out of scope ?) (requirements) -->
 According to the energy crisis, a new tool will maybe appears to keep up to date about the level of electricity available in France in real time. It is called "carte météo de l'éléctricité".
 It will be important to program the LEDs according to the estimates of this card.
-
 
 <!-- ## Check privacy -->
 
