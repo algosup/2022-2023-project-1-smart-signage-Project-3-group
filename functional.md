@@ -1,5 +1,5 @@
 # Smart Signage 
-<sub> Last update : October 3, 2022  
+<sub> Last update : October 4, 2022  
 Author : Laura-Lee
 Team : Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak, Hollande</sub>
 
