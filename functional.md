@@ -63,20 +63,6 @@ Need to be complete -->
 
 <a name="needs"/></a>
 
-## Requirements
-
-The most important points for our customers are its ecological impact, its electricity consumption and a remote controlits electricity consumption. To answer his needs we can develop some features.
-
-- Turn on the light
-- Turn off the light
-- In accord to the electricity price, turn off or reduce the light
-- Reduce the light intensity
-- Increase the light intensity
-- Know the led status and control it remotly
-- turn off the light in accord with the law
-- Send a notification when a led is down <!-- (out of scope) -->
-- Programable light wich light up on various hours <!-- (out of scope) -->
-
 <a name="risk"/></a>
 
 ## Risks and assumptions
@@ -92,6 +78,20 @@ It will be important to program the LEDs according to the estimates of this card
 
 
 <!-- ## Check privacy -->
+
+## Requirements
+
+The most important points for our customers are its ecological impact, its electricity consumption and a remote controlits electricity consumption. To answer his needs we can develop some features.
+
+- Turn on the light
+- Turn off the light
+- Reduce the light intensity
+- Increase the light intensity
+- Know the led status and control it remotly
+- Turn off the light in accord with the law
+- In accord to [Ecowatt](https://www.monecowatt.fr/), turn off or reduce the light <!-- (out of scope) -->
+- Send a notification when a led is down <!-- (out of scope) -->
+- Programable light wich light up on various hours <!-- (out of scope) -->
 
 <a name="error"/></a>
 
