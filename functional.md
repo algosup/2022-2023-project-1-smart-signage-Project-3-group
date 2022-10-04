@@ -8,6 +8,9 @@ Team : Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak, Hollande</sub>
 -  [Introduction](#overview)
 
 
+-  [Glossary](#voc)
+
+
 -  [Scenario](#scenario)
 
 
@@ -32,7 +35,9 @@ Team : Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak, Hollande</sub>
 
 [SignAl](https://signall.com/) wants to invent a new product which would allow them to control the luminous display of the signs they propose remotly and to know the state of the LEDs. The objective behind this project is to enable the company to save on electricity and reduce its ecological footprint.
 
-<a name="scenario"/></a>
+
+
+<a name="voc"/></a>
 
 ## Glossary
 
@@ -44,9 +49,11 @@ Team : Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak, Hollande</sub>
 | Signage                      	| Commercial or public display signs                                                                                                                                                                                                                                                                                                                                              	|
 | Carte météo de l'électricité 	| A map that will inform in real time about the level of electricity available in the country, thanks to a map of France established by the [Ecowatt](https://www.monecowatt.fr/) device.  Green for a normal situation, orange for a tense electrical situation and red for a very tense situation synonymous with inevitable blackouts if nothing is done to reduce consumption
 
-## Budget
+<!-- ## Budget
 
-Need to be complete
+Need to be complete -->
+
+<a name="scenario"/></a>
 
 ## Scenario
 
@@ -67,7 +74,7 @@ The most important points for our customers are its ecological impact, its elect
 - Increase the light intensity
 - Know the led status and control it remotly
 - turn off the light in accord with the law
-- Send a notif when a led is down <!-- (out of scope) -->
+- Send a notification when a led is down <!-- (out of scope) -->
 - Programable light wich light up on various hours <!-- (out of scope) -->
 
 <a name="risk"/></a>
