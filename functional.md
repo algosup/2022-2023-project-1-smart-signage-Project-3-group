@@ -33,7 +33,7 @@ Team : Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak</sub>
 
 ## Introduction
 
-[SignAl](https://signall.com/) wants to invent a new product which would allow them to control the luminous display of the signs they propose remotly and to know the state of the LEDs. The objective behind this project is to enable the company to save on electricity and reduce its ecological footprint.
+[SignAll](https://signall.com/) wants to invent a new product which would allow them to control the luminous display of the signs they propose remotly and to know the state of the LEDs. The objective behind this project is to enable the company to save on electricity and reduce its ecological footprint.
 
 
 
