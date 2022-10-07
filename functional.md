@@ -96,6 +96,7 @@ If an error occurs, a text will appear in the terminal. The error message may be
 |---------------------------------	|------------------------------------------------------------------------------	|
 | command not found               	| Can not execute the command                                                  	|
 | impossible to turn on the light 	| If the user try to turn on the light between 1:00AM and 6:00AM (French time) 	|
+| access denied                   	| Login problem, the password or/and the user job title is not correct         	|
 
 <a name="terminal"/></a>
 
