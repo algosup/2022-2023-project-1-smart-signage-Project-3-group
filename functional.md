@@ -35,40 +35,32 @@ Team : Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak</sub>
 
 [SignAll](https://signall.com/), in Vierzon needs a new connected product able to know the state and control the LED's remotly. The objective with this project is to enable the company to save on electricity, reduce its ecological footprint and limited unnecessary travel.
 
-
-
 <a name="voc"/></a>
 
 ## Glossary
 
 | Word                         	| Definition                                                                                                                                                                                                                                                                                                                                                                      	|
 |------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| LoRa                         	| It is a physical proprietary radio communication technique                                                                                                                                                                                                                                                                                                                      	|
 | Gateway                      	| It is a piece of networking hardware or software used in telecommunications networks that allows data to flow from one discrete network to another                                                                                                                                                                                                                              	|
 | LEDs                         	| It is a semiconductor light source that emits light when current flows through it.  Consumes 10 times less electricity than an incandescent bulb and 6 to 8 times less than a halogen bulb                                                                                                                                                                                      	|
 | Signage                      	| Commercial or public display signs                                                                                                                                                                                                                                                                                                                                              	|
-| Carte météo de l'électricité 	| A map that will inform in real time about the level of electricity available in the country, thanks to a map of France established by the [Ecowatt](https://www.monecowatt.fr/) device.  Green for a normal situation, orange for a tense electrical situation and red for a very tense situation synonymous with inevitable blackouts if nothing is done to reduce consumption
-
-<!-- ## Budget
-
-Need to be complete -->
+| Carte météo de l'électricité 	| A map that will inform in real time about the level of electricity available in the country, thanks to a map of France established by the [Ecowatt](https://www.monecowatt.fr/) device.  Green for a normal situation, orange for a tense electrical situation and red for a very tense situation synonymous with inevitable blackouts if nothing is done to reduce consumption |
 
 <a name="scenario"/></a>
 
-## Scenario
+## Scenario/Uses cases
 
 **Scenario 1** : Patrick is the owner of a Burger King restaurant. He is concerned about the environment and wants to save energy this winter. He would like to be able to control the consumption of his signs and add options to save money. 
 
 **Scenario 2** : Paul is a member of the maintenance team. He would like to know the status of the LEDs and be able to control them remotely to know when to move and intervene. This would avoid unnecessary travel.
 
-<a name="needs"/></a>
 
 <a name="risk"/></a>
 
 ## Risks and assumptions
 
 ### About the laws
-According to the law the LEDs must be off during the night, between 1:00AM and 6:00AM.
+In France, according to the law the LEDs must be off during the night, between 1:00AM and 6:00AM (French time).
 
 <!-- ## Need to verify what the law tells about this type of project. -->
 
@@ -77,6 +69,8 @@ According to the energy crisis, a new tool will maybe appears to keep up to date
 It will be important to program the LEDs according to the estimates of this card.
 
 <!-- ## Check privacy -->
+
+<a name="needs"/></a>
 
 ## Requirements
 
@@ -98,9 +92,10 @@ The most important points for our customers are its ecological impact, its elect
 
 If an error occurs, a text will appear in the terminal. The error message may be different depending on the error encountered.
 
-| Error             	| Description                 	|
-|-------------------	|-----------------------------	|
-| command not found 	| Can not execute the command 	|
+| Error                           	| Description                                                                  	|
+|---------------------------------	|------------------------------------------------------------------------------	|
+| command not found               	| Can not execute the command                                                  	|
+| impossible to turn on the light 	| If the user try to turn on the light between 1:00AM and 6:00AM (French time) 	|
 
 <a name="terminal"/></a>
 
