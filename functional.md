@@ -1,5 +1,5 @@
 # Smart Signage 
-<sub> Last update : October 7, 2022  
+<sub> Last update : October 13, 2022  
 Author : Laura-Lee Hollande
 Team : Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak</sub>
 
@@ -49,6 +49,8 @@ Team : Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak</sub>
 <a name="scenario"/></a>
 
 ## Scenario/Uses cases
+
+<!-- Patrick Pop is the owner of Burger King restaurant in Bourges and have a signage on his restaurant. He wants to reduce his electricity consumption to save money. He needs to control and see how much electricity is consummed.-->
 
 **Scenario 1** : Patrick is the owner of a Burger King restaurant. He is concerned about the environment and wants to save energy this winter. He would like to be able to control the consumption of his signs and add options to save money. 
 
@@ -125,6 +127,8 @@ Then they will find all the commands they can use and their description :
 | on       	| Turn on the LEDs                   	| The brand where the signage is 	|
 | up       	| Increase the intensity of the LEDs 	| The brand where the signage is 	|
 | down     	| Decrease the intensity of the LEDs 	| The brand where the signage is 	|
+
+<!-- suivie de la consommation -> maintenance + restaurant -->
 
 <a name="out-of-scope"/></a>
 
