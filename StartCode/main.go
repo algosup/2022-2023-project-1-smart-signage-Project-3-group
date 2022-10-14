@@ -47,3 +47,14 @@ func blinkWithGoroutine(l led.LED) {
 
 	}
 }
+
+func BrightnessLow(l led.LED){
+	for {
+		time.Sleep(time.Millisecond * 100)
+		l.Toggle()
+		time.Sleep(time.Millisecond * 100)
+		l.Toggle()
+
+	}
+	
+}
