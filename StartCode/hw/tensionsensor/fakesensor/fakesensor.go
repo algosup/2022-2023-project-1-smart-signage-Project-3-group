@@ -1,14 +1,12 @@
-package fakesensor 
-
+package fakesensor
 
 type Sensor struct {
 	sensor pin
-	on  bool
+	on     bool
 }
 
-func RealSensor() *Sensor {
-	s := machine.Sensor
-	s.Configure(machine.PinConfig{Mode: machine.PinOutput})
+func FakeSensor() *Sensor {
+	s := &fakePin{on: false}
 
 	sensor := Sensor{
 		sensor: s,
@@ -22,6 +20,28 @@ func (s *Sensor) On() {
 	s.on = true
 }
 
-func (s *Sensor) GetInfos(){
-	s.Sensor.Read() 
+func (s *Sensor) GetInfos() {
+	s.sensor.Read()
+}
+
+type pin interface {
+	Read()
+	High()
+	Low()
+}
+
+type fakePin struct {
+	on bool
+}
+
+func (p *fakePin) High() {
+	p.on = true
+}
+
+func (p *fakePin) Low() {
+	p.on = false
+}
+
+func (p *fakePin) Read() {
+
 }
