@@ -14,7 +14,7 @@
   - [e. Alternate Solutions](#e-alternate-solutions)
 - [4. Further Considerations](#4-further-considerations)
   - [a. Impact on other teams](#a-impact-on-other-teams)
-  - [b. Third-party services and platforms considerations](#b-third-party-services-and-platforms-considerations)
+  - [b. Third-party services](#b-third-party-services)
   - [c. Cost analysis](#c-cost-analysis)
   - [d. Security considerations](#d-security-considerations)
   - [e. Privacy considerations](#e-privacy-considerations)
@@ -32,9 +32,7 @@
   - [a. Discussion](#a-discussion)
   - [b. Open Questions](#b-open-questions)
 - [7. End Matter](#7-end-matter)
-  - [a. Related Work](#a-related-work)
-  - [b. References](#b-references)
-  - [c. Acknowledgments](#c-acknowledgments)
+  - [a. References](#a-references)
 
 
 # 1. Front matter
@@ -177,12 +175,14 @@ How will it cope with future requirements?
 
 ## e. Alternate Solutions 
 
-We can see this problem from a different perspective and propose a different approach to solving it. One of the point that we can discuss and why use Lora instead of Wifi. 
+We can see this problem from a different perspective and propose a different approach to solving it. One of the point that we can discuss and why use Lora instead of Wifi. <br>
+With a 4G card and an internet connection dedicated to the device we can think that is the good solution for this problem but it's not. One of the reason that we can't use Wifi it's because a large part of the market of SignAll are bank and insurance. Use a wifi network in these type of shops increase the risk of hacks and data leaks. 
 # 4. Further Considerations
 ## a. Impact on other teams
 
-How will this increase the work of other people?
-## b. Third-party services and platforms considerations
+ **SignAl** technicians cannot at the moment, identify if a sign is broken or not without visiting the site. So with our product we can save a lot of time for technicians. 
+
+## b. Third-party services
 
 Is it really worth it compared to building the service in-house?
 What are some of the security and privacy concerns associated with the services/platforms?
@@ -191,8 +191,8 @@ How will it scale?
 What possible future issues are anticipated? 
 ## c. Cost analysis
 
-What is the cost to run the solution per day?
-What does it cost to roll it out? 
+Let's talk about cost. First of all the company need to produce the device 
+ cost to roll it out? 
 
 ## d. Security considerations
 
@@ -261,10 +261,8 @@ Elements of the solution that members of the team do not agree on and need to be
 
 Questions about things you do not know the answers to or are unsure that you pose to the team and stakeholders for their input. These may include aspects of the problem you don’t know how to resolve yet. 
 # 7. End Matter
-## a. Related Work
 
-Any work external to the proposed solution that is similar to it in some way and is worked on by different teams. It’s important to know this to enable knowledge sharing between such teams when faced with related problems. 
-## b. References
+## a. References
 
 Links to documents and resources that you used when coming up with your design and wish to credit. 
-## c. Acknowledgments
+
