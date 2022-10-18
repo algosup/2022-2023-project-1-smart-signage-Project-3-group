@@ -10,9 +10,8 @@
   - [a. Current or Existing Solution / Design](#a-current-or-existing-solution--design)
   - [b. Suggested or Proposed Solution / Design](#b-suggested-or-proposed-solution--design)
   - [c. Test Plan](#c-test-plan)
-  - [d. Monitoring and Alerting Plan](#d-monitoring-and-alerting-plan)
-  - [e. Release / Roll-out and Deployment Plan](#e-release--roll-out-and-deployment-plan)
-  - [f. Alternate Solutions / Designs](#f-alternate-solutions--designs)
+  - [d. Release / Roll-out and Deployment Plan](#d-release--roll-out-and-deployment-plan)
+  - [e. Alternate Solutions](#e-alternate-solutions)
 - [4. Further Considerations](#4-further-considerations)
   - [a. Impact on other teams](#a-impact-on-other-teams)
   - [b. Third-party services and platforms considerations](#b-third-party-services-and-platforms-considerations)
@@ -21,6 +20,7 @@
   - [e. Privacy considerations](#e-privacy-considerations)
   - [f. Regional considerations](#f-regional-considerations)
   - [g. Accessibility considerations](#g-accessibility-considerations)
+  - [h. Operational considerations](#h-operational-considerations)
   - [i. Risks](#i-risks)
   - [j. Support considerations](#j-support-considerations)
 - [5. Work](#5-work)
@@ -52,54 +52,54 @@ Bug Tracker by Victor Leroy : https://docs.google.com/spreadsheets/d/12PCz3j1eYL
 
 # 2. Introduction
 ## a. Overview
-With the actual crisis we need find solution to decrease the consumption of electricity and one of the aspect that we can improve are LED's signs in the street. Is for this reason that 
-[SignAl](https://signall.com/) wants to invent a new product which would allow them to control the luminous display of the signs they propose remotly and to know the state of the LEDs. The objective behind this project is to enable the company to save on electricity, reduce its ecological footprint and earn time for their technician. 
+With the actual crisis we need to find a solution to decrease the consumption of electricity and one of the aspect that we can improve are LED's signs in the street. This is the reason why 
+[SignAl](https://signall.com/) wants to invent a new product which would allow them to control the luminous display of the signs they propose remotly and to know the state of the LEDs. The objective behind this project is to enable the company to save electricity, reduce its ecological footprint and earn time for their technician. 
 
 ## b. Glossary  or Terminology
 
 | Terms                        | Definition             |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LoRa|  LoRa (short for long range) is a spread spectrum modulation technique derived from chirp spread spectrum (CSS) technology. LoRa is a long range, low power wireless platform that has become the de facto wireless platform of Internet of Things (IoT).|
+| LoRa|  LoRa (short for long range) is a spread spectrum modulation technique derived from chirp spread spectrum (CSS) technology. LoRa is a long range, low power wireless platform that became the de facto wireless platform of Internet of Things (IoT).|
 | Gateway| It is a piece of networking hardware or software used in telecommunications networks that allows data to flow from one discrete network to another. |
-| LEDs| It is a semiconductor light source that emits light when current flows through it. Consumes 10 times less electricity than an incandescent bulb and 6 to 8 times less than a halogen bulb|
-| STM32 Bluepill| It's a electronic board based on a STM32F103C8T6 microcontroller|
+| LEDs| It is a semiconductor light source that emits light when current flows through it. Consumes 10 times less electricity than an incandescent bulb and 6 to 8 times less than a halogen bulb.|
+| STM32 Bluepill| It's an electronic board based on a STM32F103C8T6 microcontroller.|
 | TTL module | Converter USB to TTL|
 
 
 
 ## c. Context or Background
-For the moment all the products sell by [SignAl](https://signall.com/) are not connected. Users can't switch on and off theirs signage with a remote. This poses a problem especially now with the increase of the price of electricity. Whith this project the company wants its future users to be able to switch on or off their signs like they want. In addition, **SignAl** technicians cannot at this time identify if a sign is broken or not without visiting the site. This second issue wastes a lot of time for technicians and need to be solve. Our role is to create a solution to all the problems and allow the company to follow its ecological policy.  
+At the moment, all the products sold by [SignAl](https://signall.com/) are not connected. Users can't switch on and off their signage with a remote. This poses a problem especially now with the increase of the electricity price. With this project the company wants their future users to be able to switch on or off their signs as they want. In addition, **SignAl** technicians cannot at the moment, identify if a sign is broken or not without visiting the site. This second issue wastes a lot of time for technicians and need to be solved. Our role is to create a solution to all the problems and allow the company to follow its ecological policy.  
 
 
 ## d. Product and Technical Requirements
 
 Product requirements :
-- Our product need to be a device that we can plug in a LED sign to transform the normal sign into a connected sign. Thanks to this the sign can be control remotely. In addition it will be possible to recognize if the sign is broken by controlling the intensity of the LEDs thanks to a captor. 
+- Our product need to be a device that we can plug in a LED sign to transform the normal sign into a connected sign. Thanks to this the sign can be controlled remotely. In addition it will be possible to recognize if the sign is broken by controlling the intensity of the LEDs thanks to a sensor. 
 
 Technical requirements :
 - Following the company's need, **ALGOSUP** advised us by purchasing by itself a "LoRa-E5 Development Kit" and a "Bluepill STM32" to use this type of hardware. 
 - We have at our disposal LEDs and different sensors to simulate a real panel. 
-- Like in addition to be a real project it's also a school project. we mandatory by the school to use TinyGo for coding. 
+- Like in addition to be a real project it's also a school project. The school decided that the usage of TinyGo is mandatory. 
 
 ## e. Future Goals
-At the moment, the customer only needs the device without a user interface. They just want to see our ideas and how we solve this problem technically. So the main goal is to bring a solution to the customer. If we have time, a user interface can be created to make our product more user-friendly, even if it is a beta version. If a user interface has to be made it will be in a second time 
+At the moment, the customer only needs the device without a user interface. They just want to see our ideas and how we solve this problem technically. So the main goal is to bring a solution to the customer. If we have time, a user interface can be created to make our product more user-friendly, even if it is a beta version. If a user interface has to be made it will be in a second time.
 
 ## f. Assumptions
-For the solution to work we need like said above a LoRa-E5 Development Kit, a Arduino STM32 to flash the code on the board some LEDs to simulate a sign and a captor of electric intensity. 
+In order to create our solution product, we need like written above a LoRa-E5 Development Kit, an Arduino STM32 to flash the code on the board, some LEDs to simulate a sign and a captor of electric intensity. 
   
 # 3. Solutions
 ## a. Current or Existing Solution / Design
 
-[Trilux](https://www.trilux.com/fr/produits/gestion-declairage-livelink/livelink/) is a lighting company. They create a solution call **Livelink**. Livelink is an intelligent lighting network where all the LEDs are connected together. The lighting is biodynamic and controlled by sensors. On the official website is written "Intelligent lighting installations, which thanks to their sensor control reduce energy consumption, self-report maintenance needs and are simple to use... the lighting market has been transformed since the arrival of LED technology, digital technology and major social trends, such as connectivity and big data.". <br>
-Their product is the closest thing to our solution. The big difference it's not for advertising panel. 
+[Trilux](https://www.trilux.com/fr/produits/gestion-declairage-livelink/livelink/) is a lighting company. They created a solution call **Livelink**. Livelink is an intelligent lighting network where all the LEDs are connected together. The lighting is biodynamic and controlled by sensors. On the official website it is written "Intelligent lighting installations, which thanks to their sensor control reduce energy consumption, self-report maintenance needs and are simple to use... the lighting market has been transformed since the arrival of LED technology, digital technology and major social trends, such as connectivity and big data.". <br>
+Their product is the closest thing to our solution. The big difference is that it's not for advertising panels. 
 
 ## b. Suggested or Proposed Solution / Design 
 
 
 
 
-Firt of all, this project need hardware to work and this is how you need to connect the differrent device. For that you need :
-- some pin cables male and female 
+First of all, this project needs hardware to work and this is how you need to connect the different device :
+- some male and female pin cables  
 - 1 breadboard
 - a bluepill
 - 1 TTL module
@@ -109,7 +109,7 @@ Firt of all, this project need hardware to work and this is how you need to conn
 
 //IMAGE MONTAGE PLUS EXPLICATION //
 
-Our solution consist to make communicate the Lora-E5 board and the bluepill. The blue pill is the brain of this device. Just to remind, the programm need to be in go and tinygo for the bluepill and for the Lora-E5 we can communicate with it only by "AT COMMAND". To communicate between both board  we gonna use the protocole Lora(refer to the gloassary). <br>
+Our solution consists in making communicate the Lora-E5 board and the bluepill. The blue pill is the brain of this device. As a reminder, the programm need to be in Go and TinyGo for the bluepill and for the Lora-E5 we can communicate with it only by "AT COMMAND". To communicate between both boards we are going to use the protocole LoRa (refer to the glossary). <br>
 **Why use LoRa and LoRaWAN Technologies?** <br>
 There are several advantages of using LoRa and LoRaWAN technology.
 
@@ -117,13 +117,13 @@ There are several advantages of using LoRa and LoRaWAN technology.
 LoRa enables wireless communication over far longer ranges compared to Wi-Fi or BLE.
 
 **Low Power**<br>
-Compared to WiFi, BLE or Satellite Communication, devices in a LoRa network consume relatively little power. This allows them to run on renewable energy (eg. Solar power), and reduces battery replacement costs. Edge nodes can run on a single battery for up to years.
+Compared to WiFi, BLE or Satellite Communication, devices in a LoRa network consumes relatively less power. This allows them to run on renewable energy (eg. Solar power), and reduces battery replacement costs. Edge nodes can run on a single battery for a few years.
 
 **Secure**<br>
 LoRaWAN networks are protected by end-to-end AES128 encryption, mutual authentication, integrity protection, and confidentiality.
 
 **Standardized**<br>
-LoRa & LoRaWAN are widely accepted technologies and protocols, allowing you to capitalise on device interoperability and global availability of LoRaWAN networks for rapid and convenient deployment of IoT applications anywhere.
+LoRa & LoRaWAN are widely accepted technologies and protocols, allowing you to capitalise on device interoperability and global availability of LoRaWAN networks for fast and convenient deployment of IoT applications anywhere.
 
 **Low Cost**<br>
 LoRa operates on unlicensed frequency spectrums, which reduces fees for network operations. In addition, a wide variety of pre-licensed LoRa development platforms reduces legislative costs.
@@ -133,14 +133,19 @@ LoRa & LoRaWAN combine the best of other technologies, and can be used in a vari
 
 
 
+After these explanations about why we use Lora protocole for this project, we gonna explain algo
 
-Dependencies of the current solution
-Pros and cons of the proposed  solution 
-Data Model / Schema Changes
-Schema definitions
-New data models
-Modified data models
-Data validation methods
+Turn on the light
+Turn off the light
+Reduce the light intensity
+Increase the light intensity
+Know the led status and control it remotly
+Turn off the light in accord with the law
+In accord to Ecowatt, turn off or reduce the light
+Send a notification when a led is down
+Programable light wich light up on various hours
+
+
 Business Logic
 API changes
 Pseudocode
@@ -155,8 +160,7 @@ UX changes
 UI changes
 Wireframes with descriptions
 Links to UI/UX designer’s work
-Mobile concerns
-Web concerns
+
 UI states
 Error handling
 Other questions to answer
@@ -166,27 +170,14 @@ How will it recover in the event of a failure?
 How will it cope with future requirements?
 ## c. Test Plan
 **(VICTOR)**
-## d. Monitoring and Alerting Plan 
 
-Logging plan and tools
-Monitoring plan and tools
-Metrics to be used to measure health
-How to ensure observability
-Alerting plan and tools
-## e. Release / Roll-out and Deployment Plan
+## d. Release / Roll-out and Deployment Plan
 
-Deployment architecture 
-Deployment environments
-Phased roll-out plan e.g. using feature flags
-Plan outlining how to communicate changes to the users, for example, with release notes
+**SignAll** wants to release the product as soon as possible. They want to create a new line of product connected based on our product. They said " We want to be the first on this market". This product needs to be available for all the customers of **SignAll** but not only because they also want to sell this product to the competitor's customers. Indeed, if the product can be used on different signs of different brands, the market has no limit. In addition it's a really positive point for their brand image to be the precursor on this type of product.  
 
-## f. Alternate Solutions / Designs
+## e. Alternate Solutions 
 
-Short summary statement for each alternative solution
-Pros and cons for each alternative
-Reasons why each solution couldn’t work 
-Ways in which alternatives were inferior to the proposed solution
-Migration plan to next best alternative in case the proposed solution falls through
+We can see this problem from a different perspective and propose a different approach to solving it. One of the point that we can discuss and why use Lora instead of Wifi. 
 # 4. Further Considerations
 ## a. Impact on other teams
 
@@ -212,7 +203,7 @@ How will the solution affect the security of other components, services, and sys
 ## e. Privacy considerations
 
 Does the solution follow local laws and legal policies on data privacy?
-How does the solution protect users’ data privacy?
+How does the solution protect users data privacy?
 What are some of the tradeoffs between personalization and privacy in the solution? 
 
 ## f. Regional considerations
@@ -227,11 +218,11 @@ How will data transfer across regions be achieved and what are the concerns here
 
 How accessible is the solution?
 What tools will you use to evaluate its accessibility? 
-h. Operational considerations
+## h. Operational considerations
 
 Does this solution cause adverse aftereffects?
 How will data be recovered in case of failure?
-How will the solution recover in case of a failure?
+How will the solution recover in case of failure?
 How will operational costs be kept low while delivering increased value to the users? 
 
 ## i. Risks
