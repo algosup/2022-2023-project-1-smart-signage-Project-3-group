@@ -59,10 +59,11 @@ With the actual crisis we need find solution to decrease the consumption of elec
 
 | Terms                        | Definition             |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| LoRa|  It is a physical proprietary radio communication technique.|
+| LoRa|  LoRa (short for long range) is a spread spectrum modulation technique derived from chirp spread spectrum (CSS) technology. LoRa is a long range, low power wireless platform that has become the de facto wireless platform of Internet of Things (IoT).|
 | Gateway| It is a piece of networking hardware or software used in telecommunications networks that allows data to flow from one discrete network to another. |
 | LEDs| It is a semiconductor light source that emits light when current flows through it. Consumes 10 times less electricity than an incandescent bulb and 6 to 8 times less than a halogen bulb|
-|Arduino STM32|∞|
+| STM32 Bluepill| It's a electronic board based on a STM32F103C8T6 microcontroller|
+| TTL module | Converter USB to TTL|
 
 
 
@@ -76,7 +77,7 @@ Product requirements :
 - Our product need to be a device that we can plug in a LED sign to transform the normal sign into a connected sign. Thanks to this the sign can be control remotely. In addition it will be possible to recognize if the sign is broken by controlling the intensity of the LEDs thanks to a captor. 
 
 Technical requirements :
-- Following the company's need, **ALGOSUP** advised us by purchasing by itself "LoRa-E5 Development Kit" and a "Arduino STM32" to use this type of hardware. 
+- Following the company's need, **ALGOSUP** advised us by purchasing by itself a "LoRa-E5 Development Kit" and a "Bluepill STM32" to use this type of hardware. 
 - We have at our disposal LEDs and different sensors to simulate a real panel. 
 - Like in addition to be a real project it's also a school project. we mandatory by the school to use TinyGo for coding. 
 
@@ -94,7 +95,45 @@ Their product is the closest thing to our solution. The big difference it's not 
 
 ## b. Suggested or Proposed Solution / Design 
 
-External components that the solution will interact with and that it will alter
+
+
+
+Firt of all, this project need hardware to work and this is how you need to connect the differrent device. For that you need :
+- some pin cables male and female 
+- 1 breadboard
+- a bluepill
+- 1 TTL module
+- LEDs
+- 1 switch 
+- Regular tools for hardware
+
+//IMAGE MONTAGE PLUS EXPLICATION //
+
+Our solution consist to make communicate the Lora-E5 board and the bluepill. The blue pill is the brain of this device. Just to remind, the programm need to be in go and tinygo for the bluepill and for the Lora-E5 we can communicate with it only by "AT COMMAND". To communicate between both board  we gonna use the protocole Lora(refer to the gloassary). <br>
+**Why use LoRa and LoRaWAN Technologies?** <br>
+There are several advantages of using LoRa and LoRaWAN technology.
+
+**Long Range**<br>
+LoRa enables wireless communication over far longer ranges compared to Wi-Fi or BLE.
+
+**Low Power**<br>
+Compared to WiFi, BLE or Satellite Communication, devices in a LoRa network consume relatively little power. This allows them to run on renewable energy (eg. Solar power), and reduces battery replacement costs. Edge nodes can run on a single battery for up to years.
+
+**Secure**<br>
+LoRaWAN networks are protected by end-to-end AES128 encryption, mutual authentication, integrity protection, and confidentiality.
+
+**Standardized**<br>
+LoRa & LoRaWAN are widely accepted technologies and protocols, allowing you to capitalise on device interoperability and global availability of LoRaWAN networks for rapid and convenient deployment of IoT applications anywhere.
+
+**Low Cost**<br>
+LoRa operates on unlicensed frequency spectrums, which reduces fees for network operations. In addition, a wide variety of pre-licensed LoRa development platforms reduces legislative costs.
+
+**Flexible**<br>
+LoRa & LoRaWAN combine the best of other technologies, and can be used in a variety of environments and networks. Like Wi-Fi, LoRaWAN operates in the unlicensed band and supports indoor applications; like Cellular, LoRa Technology is highly secure from end devices to the application server, and is suitable for outdoor applications.
+
+
+
+
 Dependencies of the current solution
 Pros and cons of the proposed  solution 
 Data Model / Schema Changes
@@ -125,27 +164,6 @@ How will the solution scale?
 What are the limitations of the solution?
 How will it recover in the event of a failure?
 How will it cope with future requirements?
-
-**Why use LoRa and LoRaWAN Technologies?** <br>
-There are several advantages of using LoRa and LoRaWAN technology.
-
-**Long Range**<br>
-LoRa enables wireless communication over far longer ranges compared to Wi-Fi or BLE.
-
-**Low Power**<br>
-Compared to WiFi, BLE or Satellite Communication, devices in a LoRa network consume relatively little power. This allows them to run on renewable energy (eg. Solar power), and reduces battery replacement costs. Edge nodes can run on a single battery for up to years.
-
-**Secure**<br>
-LoRaWAN networks are protected by end-to-end AES128 encryption, mutual authentication, integrity protection, and confidentiality.
-
-**Standardized**<br>
-LoRa & LoRaWAN are widely accepted technologies and protocols, allowing you to capitalise on device interoperability and global availability of LoRaWAN networks for rapid and convenient deployment of IoT applications anywhere.
-
-**Low Cost**<br>
-LoRa operates on unlicensed frequency spectrums, which reduces fees for network operations. In addition, a wide variety of pre-licensed LoRa development platforms reduces legislative costs.
-
-**Flexible**<br>
-LoRa & LoRaWAN combine the best of other technologies, and can be used in a variety of environments and networks. Like Wi-Fi, LoRaWAN operates in the unlicensed band and supports indoor applications; like Cellular, LoRa Technology is highly secure from end devices to the application server, and is suitable for outdoor applications.
 ## c. Test Plan
 **(VICTOR)**
 ## d. Monitoring and Alerting Plan 
