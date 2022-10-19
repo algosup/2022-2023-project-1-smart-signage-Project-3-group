@@ -36,4 +36,13 @@ func (l *LED) Toggle() {
 	}
 }
 
+func (l LED) String() string {
+	var onStr string
+	if l.on {
+		onStr = "On"
+	} else {
+		onStr = "Off"
+	}
 
+	return "LED: " + onStr
+}

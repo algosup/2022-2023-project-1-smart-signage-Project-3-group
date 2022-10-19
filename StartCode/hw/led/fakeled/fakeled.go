@@ -6,13 +6,24 @@ type LED struct {
 }
 
 func NewFake() *LED {
-	l := &fakePin{on: false}
+	l := &fakePin{on: true}
 
 	led := LED{
 		led: l,
+		on:  true,
+	}
+	return &led
+}
+
+func (l *LED) String() string {
+	var onStr string
+	if l.on {
+		onStr = "On"
+	} else {
+		onStr = "Off"
 	}
 
-	return &led
+	return "LED: " + onStr
 }
 
 func (l *LED) On() {

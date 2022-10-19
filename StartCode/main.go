@@ -5,16 +5,18 @@ import (
 	"time"
 
 	"github.com/tuxago/go/dolanor/tinygo/hw/led"
-	"github.com/tuxago/go/dolanor/tinygo/hw/led/realled"
+	"github.com/tuxago/go/dolanor/tinygo/hw/led/fakeled"
 )
 
 func main() {
-	var l led.LED
+	var light led.LED
 
-	l = realled.NewReal()
+	light = fakeled.NewFake()
+	ledStr := light.String()
+	println(ledStr)
 
 	// blinkSimple(l)
-	blinkWithGoroutine(l)
+	//blinkWithGoroutine(l)
 }
 
 func blinkSimple(l led.LED) {
@@ -48,7 +50,7 @@ func blinkWithGoroutine(l led.LED) {
 	}
 }
 
-func BrightnessLow(l led.LED){
+func BrightnessLow(l led.LED) {
 	for {
 		time.Sleep(time.Millisecond * 100)
 		l.Toggle()
@@ -56,5 +58,5 @@ func BrightnessLow(l led.LED){
 		l.Toggle()
 
 	}
-	
+
 }
