@@ -20,11 +20,11 @@
   - [e. Privacy considerations](#e-privacy-considerations)
   - [h. Support considerations](#h-support-considerations)
 - [5. Work](#5-work)
-  - [a. Work estimates and timelines](#a-work-estimates-and-timelines)
-  - [b. Prioritization](#b-prioritization)
-  - [c. Milestones](#c-milestones)
+  - [a. Prioritization](#a-prioritization)
+  - [b. Milestones](#b-milestones)
 - [6. End Matter](#6-end-matter)
   - [a. References](#a-references)
+  - [b. Acknowledgement](#b-acknowledgement)
 
 
 # 1. Front matter
@@ -33,8 +33,6 @@ Smart Signage Project 1
 Author: Thomas Planchard 
 <br>
 Team: Karine Vinette, Paul Nowak, Victor Leroy, Laura-Lee Hollande, Thomas Planchard
-<br>
-Created on : 
 <br>
 Last updated : 
 <br>
@@ -91,8 +89,10 @@ Their product is the closest thing to our solution. The big difference is that i
 First of all, this project needs hardware to work and this is how you need to connect the different device :
 - some male and female pin cables  
 - 1 breadboard
-- a bluepill
+- 1 bluepill
 - 1 TTL module
+- 1 stlink
+- 1 Lora E5-development 
 - LEDs
 - 1 switch 
 - Regular tools for hardware
@@ -125,6 +125,22 @@ LoRa & LoRaWAN combine the best of other technologies, and can be used in a vari
 
 After these explanations about why we use Lora protocole for this project, we gonna explain algo
 
+![img](img/adcfct.png)
+![img](img/blinkfct.png)
+![img](img/brightnesshighfct.png)
+![img](img/brightnesslowfct.png)
+![img](img/configurefct.png)
+![img](img/getledinfofct.png)
+![img](img/gettensionfct.png)
+![img](img/high&lowfct.png)
+![img](img/newrealfct.png)
+![img](img/offfct.png)
+![img](img/onfct.png)
+![img](img/realsensorfct.png)
+![img](img/sendnotificationfct.png)
+![img](img/Togglefct.png)
+
+
 Turn on the light
 Turn off the light
 Reduce the light intensity
@@ -136,28 +152,7 @@ Send a notification when a led is down
 Programable light wich light up on various hours
 
 
-Business Logic
-API changes
-Pseudocode
-Flowcharts
-Error states
-Failure scenarios
-Conditions that lead to errors and failures
-Limitations
-Presentation Layer
-User requirements
-UX changes
-UI changes
-Wireframes with descriptions
-Links to UI/UX designer’s work
 
-UI states
-Error handling
-Other questions to answer
-How will the solution scale?
-What are the limitations of the solution?
-How will it recover in the event of a failure?
-How will it cope with future requirements?
 ## c. Test Plan
 Test plan by Victor LEROY :
 https://docs.google.com/spreadsheets/d/1H_F60G7YNmifNi9nX2NOWJw-gs1-F-nA7Pi6IcHi6kQ/edit#gid=2124204330
@@ -202,48 +197,53 @@ Who is responsible for the maintenance of the solution?
 How will knowledge transfer be accomplished if the project owner is unavailable? 
 
 # 5. Work
-## a. Work estimates and timelines
-
-List of specific, measurable, and time-bound tasks
-Resources needed to finish each task
-Time estimates for how long each task needs to be completed
-## b. Prioritization
+## a. Prioritization
 
 | Function                        | Flexibility         |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Turn on/off the light| F1 |
 | Reduce/increase the light intensity| F2 |
-| Know the led status and control it remotly|F2|
+| Know the led status |F2|
+| Know the brightness of a led  |F1|
 | Turn off the light in accord with the law|F0|
 | In accord to Ecowatt, turn off or reduce the light|F0 |
 | Send a notification when a led is down | F2|
 | Programable light which light up on various hours |F0 |
-## c. Milestones
+## b. Milestones
 
 - 1st week:<br>
-The first week we will finish the introduction of the project, writing the documentation
--Functional Specification
--Technical Specification
--Architecture Diagram
+-The first week we will finish the introduction of the project, writing the documentation<br>
+-Functional Specification<br>
+-Technical Specification<br>
+-Architecture Diagram<br>
 
 - 2nd week:<br>
-We are  going deeper, and to use the hardware …
--Blink the Leds
--Connect the sensors
--Quality checking
+-We look how to use the HW and which one we are goig to use<br>
+-Write all the questions that we need to ask to Signall<br>
+-Try to use the HW<br>
+
 
 - 3rd week:<br>
-We are almost done, we have to display the work in the console.
--Display in the console
--Link lora board and bluepill
--Quality checking
+We are going deeper, and start to code<br>
+-Blink the Leds<br>
+-Connect the sensors<br>
+-Quality checking<br>
 
-- 4th week:<br>
-This is the last step of the project, all has to be done and ready to present to the client !
+- 4rd week:<br>
+-Know the brightness of a led<br>
+-Link lora board and bluepill<br>
+-Turn off the light in accord with the law<br>
+-Programable light which light up on various hours<br>
+-Meeting with Signall<br>
+-Quality checking<br>
+
+- 5th week:<br>
+This is the last step of the project, all has to be done and ready to present to the client !<br>
 -Oral presentation
 
 
 # 6. End Matter
+
 
 ## a. References
 
@@ -253,3 +253,9 @@ https://tinygo.org/docs/reference/microcontrollers/machine/bluepill/
 https://www.electronicshub.org/getting-started-with-stm32f103c8t6-blue-pill/
 https://microcontrollerslab.com/adc-esp32-measuring-voltage-example/
 https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/
+
+## b. Acknowledgement
+
+Tanguy Herrmann -- email :  tanguy@tuxago.com<br>
+Delphine Prousteau -- email : dprousteau@quanaup.fr<br>
+Jilhnanne Bilacquois
