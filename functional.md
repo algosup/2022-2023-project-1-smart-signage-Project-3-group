@@ -1,44 +1,33 @@
 # Smart Signage 
-<sub> Last update : October 13, 2022  
+<sub> Last update : October 21, 2022  
 Author : Laura-Lee Hollande
-Team : Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak</sub>
+Team : Victor Leroy, Karine Vinette, Thomas Planchard, Paul Nowak</sub>
 
 ## Table of Contents
-
--  [Introduction](#overview)
-
-
--  [Glossary](#voc)
-
-
--  [Scenario](#scenario)
-
-
--  [Requirements](#needs)
-
-
--  [Risks and assumptions](#risk)
-
-
--  [Error reporting](#error)
-
-
--  [Terminal](#terminal)
-
-
--  [Out of scope](#out-of-scope)
-
+- [Smart Signage](#smart-signage)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Glossary](#glossary)
+  - [Scenario/Uses cases](#scenariouses-cases)
+  - [Risks and assumptions](#risks-and-assumptions)
+    - [About the laws](#about-the-laws)
+    - [Energy crisis](#energy-crisis)
+  - [What the project is not](#what-the-project-is-not)
+  - [Requirements](#requirements)
+  - [Error reporting](#error-reporting)
+  - [Terminal](#terminal)
+    - [Login](#login)
+    - [Home page](#home-page)
+  - [Out of scope](#out-of-scope)
 
 <a  name="overview"/></a>
 
 ## Introduction
-
 [SignAll](https://signall.com/), in Vierzon needs a new connected product able to know the state and control the LED's remotly. The objective with this project is to enable the company to save on electricity, reduce its ecological footprint and limited unnecessary travel.
 
 <a name="voc"/></a>
 
 ## Glossary
-
 | Word                         	| Definition                                                                                                                                                                                                                                                                                                                                                                      	|
 |------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
 | Gateway                      	| It is a piece of networking hardware or software used in telecommunications networks that allows data to flow from one discrete network to another                                                                                                                                                                                                                              	|
@@ -60,7 +49,6 @@ Team : Victor Leroy, Karine Vinette, Thomas Planchar, Paul Nowak</sub>
 <a name="risk"/></a>
 
 ## Risks and assumptions
-
 ### About the laws
 In France, according to the law the LEDs must be off during the night, between 1:00AM and 6:00AM (French time).
 
@@ -72,10 +60,15 @@ It will be important to program the LEDs according to the estimates of this card
 
 <!-- ## Check privacy -->
 
+
+<a name="is-not"/></a>
+
+## What the project is not
+This new product do not send information by wifi for security reasons.
+
 <a name="needs"/></a>
 
 ## Requirements
-
 The most important points for our customers are its ecological impact, its electricity consumption and a remote controlits electricity consumption. To answer his needs we can develop some features.
 
 - Turn on the light
@@ -91,7 +84,6 @@ The most important points for our customers are its ecological impact, its elect
 <a name="error"/></a>
 
 ## Error reporting
-
 If an error occurs, a text will appear in the terminal. The error message may be different depending on the error encountered.
 
 | Error                           	| Description                                                                  	|
@@ -103,7 +95,6 @@ If an error occurs, a text will appear in the terminal. The error message may be
 <a name="terminal"/></a>
 
 ## Terminal
-
 Displayed when the terminal is open, the home page serves three purposes:
 
 - login page
@@ -133,7 +124,6 @@ Then they will find all the commands they can use and their description :
 <a name="out-of-scope"/></a>
 
 ## Out of scope
-
 To a better user experience, create a web interface will be easier. It will be use to manage the LEDs and see their states.
 We will use all the features mentioned above to develop our web interface.
 
