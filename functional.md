@@ -124,7 +124,7 @@ Then they will find all the commands they can use and their description :
 <a name="out-of-scope"/></a>
 
 ## Out of scope
-To a better user experience, create a web interface will be easier. It will be use to manage the LEDs and see their states.
+For a better user experience, create a web interface will be easier. It will be used to manage the LEDs and see their states.
 We will use all the features mentioned above to develop our web interface.
 
 <!-- Questions
