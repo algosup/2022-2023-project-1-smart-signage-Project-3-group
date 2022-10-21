@@ -49,9 +49,10 @@ With the actual crisis we need to find a solution to decrease the consumption of
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | LoRa|  LoRa (short for long range) is a spread spectrum modulation technique derived from chirp spread spectrum (CSS) technology. LoRa is a long range, low power wireless platform that became the de facto wireless platform of Internet of Things (IoT).|
 | Gateway| It is a piece of networking hardware or software used in telecommunications networks that allows data to flow from one discrete network to another. |
-| LEDs| It is a semiconductor light source that emits light when current flows through it. Consumes 10 times less electricity than an incandescent bulb and 6 to 8 times less than a halogen bulb.|
+| LEDs| It is a semiconductor light source that emits light when electric power flows through it. Consumes 10 times less electricity than an incandescent bulb and 6 to 8 times less than a halogen bulb.|
 | STM32 Bluepill| It's an electronic board based on a STM32F103C8T6 microcontroller.|
 | TTL module | Converter USB to TTL|
+
 
 
 
@@ -65,7 +66,7 @@ Product requirements :
 - Our product need to be a device that we can plug in a LED sign to transform the normal sign into a connected sign. Thanks to this the sign can be controlled remotely. In addition it will be possible to recognize if the sign is broken by controlling the intensity of the LEDs thanks to a sensor. 
 
 Technical requirements :
-- Following the company's need, **ALGOSUP** advised us by purchasing by itself a "LoRa-E5 Development Kit" and a "Bluepill STM32" to use this type of hardware. 
+- Following the company's need, **ALGOSUP** advised us by purchasing by itself a "LoRa-E5 Development Kit", a USB TTL, a gateway and  "Bluepill STM32" to use this type of hardware. 
 - We have at our disposal LEDs and different sensors to simulate a real panel. 
 - Like in addition to be a real project it's also a school project. The school decided that the usage of TinyGo is mandatory. 
 
@@ -91,15 +92,15 @@ First of all, this project needs hardware to work and this is how you need to co
 - 1 breadboard
 - 1 bluepill
 - 1 TTL module
-- 1 stlink
 - 1 Lora E5-development 
 - LEDs
 - 1 switch 
+- 1 tension sensor 
 - Regular tools for hardware
 
 //IMAGE MONTAGE PLUS EXPLICATION //
 
-Our solution consists in making communicate the Lora-E5 board and the bluepill. The blue pill is the brain of this device. As a reminder, the programm need to be in Go and TinyGo for the bluepill and for the Lora-E5 we can communicate with it only by "AT COMMAND". To communicate between both boards we are going to use the protocole LoRa (refer to the glossary). <br>
+Our solution consists in making communicate the Lora-E5 board and the bluepill. The blue pill is the brain of this device. As a reminder, the programm need to be in Go and TinyGo for the bluepill and for the Lora-E5 we can communicate with it only by "AT COMMAND". To communicate between both boards we are going to use the protocole LoRa (refer to the glossary). <br><br>
 **Why use LoRa and LoRaWAN Technologies?** <br>
 There are several advantages of using LoRa and LoRaWAN technology.
 
@@ -123,33 +124,24 @@ LoRa & LoRaWAN combine the best of other technologies, and can be used in a vari
 
 
 
-After these explanations about why we use Lora protocole for this project, we gonna explain algo
+After these explanations about why we use Lora protocole, we are going to explain the different algorithm : 
 
-![img](img/adcfct.png)
-![img](img/blinkfct.png)
-![img](img/brightnesshighfct.png)
-![img](img/brightnesslowfct.png)
-![img](img/configurefct.png)
-![img](img/getledinfofct.png)
-![img](img/gettensionfct.png)
-![img](img/high&lowfct.png)
-![img](img/newrealfct.png)
-![img](img/offfct.png)
-![img](img/onfct.png)
-![img](img/realsensorfct.png)
-![img](img/sendnotificationfct.png)
-![img](img/Togglefct.png)
+![img](img/adcfct.png)<br>
+![img](img/blinkfct.png)<br>
+![img](img/brightnesshighfct.png)<br>
+![img](img/brightnesslowfct.png)<br>
+![img](img/configurefct.png)<br>
+![img](img/getledinfofct.png)<br>
+![img](img/gettensionfct.png)<br>
+![img](img/high&lowfct.png)<br>
+![img](img/newrealfct.png)<br>
+![img](img/offfct.png)<br>
+![img](img/onfct.png)<br>
+![img](img/realsensorfct.png)<br>
+![img](img/sendnotificationfct.png)<br>
+![img](img/Togglefct.png)<br>
 
 
-Turn on the light
-Turn off the light
-Reduce the light intensity
-Increase the light intensity
-Know the led status and control it remotly
-Turn off the light in accord with the law
-In accord to Ecowatt, turn off or reduce the light
-Send a notification when a led is down
-Programable light wich light up on various hours
 
 
 
@@ -163,8 +155,8 @@ https://docs.google.com/spreadsheets/d/1H_F60G7YNmifNi9nX2NOWJw-gs1-F-nA7Pi6IcHi
 
 ## e. Alternate Solutions 
 
-We can see this problem from a different perspective and propose a different approach to solving it. One of the point that we can discuss and why use Lora instead of Wifi. <br>
-With a 4G card and an internet connection dedicated to the device we can think that is the good solution for this problem but it's not. One of the reason that we can't use Wifi it's because a large part of the market of SignAll are bank and insurance. Use a wifi network in these type of shops increase the risk of hacks and data leaks. 
+We can see this problem from a different perspective and propose a different approach to solve it. One of the point that we can discuss is why use Lora instead of Wifi. <br>
+With a 4G card and an internet connection dedicated to the device we can think that it is the good solution for this problem but it isn't. One of the reason that we can't use Wifi it's because a large part of the market of SignAll are banks and insurances. Using a wifi network in these type of shops increases the risk of hacks and data leaks. 
 # 4. Further Considerations
 ## a. Impact on other teams
 
@@ -176,26 +168,22 @@ Signall is implemented all over Europe and the regulation about ad signs are dif
 
 ## c. Cost analysis
 
-Let's talk about cost. First of all the company need to produce the device. Then it sells the product to their customers. For the customer's side, he need to buy the product and the installation. In addtition during the year he need to pay the extra electricity generated by the product. 
+Let's talk about cost. First of all the company needs to produce the device. Then it sells the product to their customers. For the customer's side, he needs to buy the product and the installation. In addtition during the year he needs to pay the extra electricity generated by the product. 
 
 
 ## d. Security considerations
 
-The main element of safety is the safety of the hardware. The hardware must be safe, waterproof and not dangerous for customers and technicians. We must avoid any problems related to fire and electric shock. For the software part we need to be careful that it is not possible by a hacker to overheat the leds.
+The main element of safety is the safety of the hardware. The hardware must be safe, waterproof and not dangerous for customers and technicians. We must avoid any problems related to fire and electric shock. For the software part we need to be careful that it is not possible for a hacker to overheat the leds.
 
 ## e. Privacy considerations
 
-We use Lora to avoid a lot of problems with data privacy, data leakage. If instead of using Lora, we would use wifi, it would be much more problematic, because wifi is weaker in terms of security. 
+We use Lora to avoid a lot of problems with data privacy, data leaks. If instead of using Lora, we used  wifi, it would have been much more problematic, because wifi is weaker in terms of security. 
 
 
 
 ## h. Support considerations
 
-How will the support team get across information to users about common issues they may face while interacting with the changes?
-How will we ensure that the users are satisfied with the solution and can interact with it with minimal support?
-Who is responsible for the maintenance of the solution?
-How will knowledge transfer be accomplished if the project owner is unavailable? 
-
+At the moment the support is complicated with the actual sign. There is no way to know if a sign is broken or not. The only way is to move where the sign is located. So one of the goal of the product is to save the technician time by avoiding them to move for nothing. In addition Signall want to predict the future state of led depending of the weather. 
 # 5. Work
 ## a. Prioritization
 
@@ -218,7 +206,7 @@ How will knowledge transfer be accomplished if the project owner is unavailable?
 -Architecture Diagram<br>
 
 - 2nd week:<br>
--We look how to use the HW and which one we are goig to use<br>
+-We look how to use the HW and which one we are going to use<br>
 -Write all the questions that we need to ask to Signall<br>
 -Try to use the HW<br>
 
@@ -232,13 +220,13 @@ We are going deeper, and start to code<br>
 - 4rd week:<br>
 -Know the brightness of a led<br>
 -Link lora board and bluepill<br>
--Turn off the light in accord with the law<br>
--Programable light which light up on various hours<br>
+-Turn off the light according to the law<br>
+-Programable light that lights up on various hours<br>
 -Meeting with Signall<br>
 -Quality checking<br>
 
 - 5th week:<br>
-This is the last step of the project, all has to be done and ready to present to the client !<br>
+This is the last step of the project, everything should be done and ready to present to the client !<br>
 -Oral presentation
 
 
@@ -256,6 +244,7 @@ https://wiki.seeedstudio.com/LoRa_E5_Dev_Board/
 
 ## b. Acknowledgement
 
-Tanguy Herrmann -- email :  tanguy@tuxago.com<br>
-Delphine Prousteau -- email : dprousteau@quanaup.fr<br>
-Jilhnanne Bilacquois
+Tanguy Herrmann -- contact:  tanguy@tuxago.com<br>
+Delphine Prousteau -- contact: dprousteau@quanaup.fr<br>
+Jihane Billacois -- contact: jihb@sent.com<br>
+Cedric Dumez -- contact: cedric.dumez@signall.com 
