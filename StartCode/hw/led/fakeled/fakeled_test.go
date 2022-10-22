@@ -1,16 +1,34 @@
 package fakeled
 
-import "testing"
+import (
+	"testing"
+)
 
-func TestLed(t *testing.T) {
+func TestFakeled(t *testing.T) {
+	//We test functions related to the fakeled package
 
-	led := LED{}
+	t.Run("creating a new LED", func(t *testing.T) {
+		//We create a new LED struct and read the state of its "on" bool
+		light := NewFake()
+		got := light.String()
+		want := "LED: Off"
 
-	got := NewFake(led)
-	want := &led
+		if got != want {
+			t.Errorf("got %s want %s", got, want)
+		}
+	})
 
-	if got != want {
-		t.Errorf("got %s want %s", got, want)
-	}
+	t.Run("creating a new LED and changing its state", func(t *testing.T) {
+		//we create a new LED struct and change its state from Off to On
+		newLed := NewFake()
+		newLed.Toggle()
+
+		got := newLed.String()
+		want := "LED: On"
+
+		if got != want {
+			t.Errorf("got %s want %s", got, want)
+		}
+	})
 
 }

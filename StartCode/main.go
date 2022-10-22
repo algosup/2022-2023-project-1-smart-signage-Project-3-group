@@ -4,8 +4,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/tuxago/go/dolanor/tinygo/hw/led"
-	"github.com/tuxago/go/dolanor/tinygo/hw/led/fakeled"
+	"github.com/algosup/2022-2023-project-1-smart-signage-Project-3-group/StartCode/hw/led"
+	"github.com/algosup/2022-2023-project-1-smart-signage-Project-3-group/StartCode/hw/led/fakeled"
 )
 
 func main() {
