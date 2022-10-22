@@ -3,7 +3,8 @@
 <strong>Client:</strong><br>
 SignAll is a French company that has been manufacturing large luminous signage since 1962. They supply 
 a large number of customers such as McDonald’s, Burger King, La Poste, Orange, AXA, Crédit Agricole, 
-Total, etc. to name a few.
+Total, etc. to name a few.<br>
+- [Project Description](https://github.com/algosup/2022-2023-project-1-smart-signage-Project-3-group/blob/main/Documents/2022-2023-project-1-smart-signage.pdf)
 
 <strong>Roles Team :</strong><br> Karine (Project manager), Laura-Lee (Program manager), Paul N (software engineer), Thomas (Tech lead), Victor (QA)<br>
 - [Project Roles](https://github.com/algosup/2022-2023-project-1-smart-signage-Project-3-group/blob/main/Documents/Project_roles.pdf)
