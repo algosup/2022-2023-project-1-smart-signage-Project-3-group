@@ -19,6 +19,14 @@ func main() {
 	//blinkWithGoroutine(l)
 }
 
+func getLEDInfos(l led.LED) {
+	//Check the state of the LEDs and gives some information
+}
+
+func sendATCommands() {
+	//Send AT commands to the lorae5
+}
+
 func blinkSimple(l led.LED) {
 	//Make the LED blink every 100ms
 	for {
@@ -64,4 +72,8 @@ func BrightnessLow(l led.LED) {
 
 func BrightnessHigh(l led.LED) {
 	//set the LED's state to on and increase its brightness
+}
+
+func GetLedIngo(l led.LED) {
+
 }
