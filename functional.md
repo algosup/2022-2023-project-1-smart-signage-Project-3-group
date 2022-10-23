@@ -1,5 +1,5 @@
 # Smart Signage 
-<sub> Last update : October 21, 2022  
+<sub> Last update : October 23, 2022  
 Author : Laura-Lee Hollande
 Team : Victor Leroy, Karine Vinette, Thomas Planchard, Paul Nowak</sub>
 
@@ -12,20 +12,29 @@ Team : Victor Leroy, Karine Vinette, Thomas Planchard, Paul Nowak</sub>
   - [Risks and assumptions](#risks-and-assumptions)
     - [About the laws](#about-the-laws)
     - [Energy crisis](#energy-crisis)
-  - [What the project is not](#what-the-project-is-not)
+  - [Non goals](#non-goals)
   - [Requirements](#requirements)
   - [Error reporting](#error-reporting)
   - [Terminal](#terminal)
     - [Login](#login)
     - [Home page](#home-page)
+    - [Commands](#commands)
+      - [check](#check)
+      - [off](#off)
+      - [on](#on)
+      - [up](#up)
+      - [down](#down)
+      - [prediction (out of scope)](#prediction-out-of-scope)
+      - [cons](#cons)
+    - [Error reporting](#error-reporting-1)
   - [Out of scope](#out-of-scope)
 
-<a  name="overview"/></a>
+<!-- <a  name="overview"/></a> -->
 
 ## Introduction
 [SignAll](https://signall.com/), in Vierzon needs a new connected product able to know the state and control the LED's remotly. The objective with this project is to enable the company to save on electricity, reduce its ecological footprint and limited unnecessary travel.
 
-<a name="voc"/></a>
+<!-- <a name="voc"/></a> -->
 
 ## Glossary
 | Word                         	| Definition                                                                                                                                                                                                                                                                                                                                                                      	|
@@ -35,7 +44,7 @@ Team : Victor Leroy, Karine Vinette, Thomas Planchard, Paul Nowak</sub>
 | Signage                      	| Commercial or public display signs                                                                                                                                                                                                                                                                                                                                              	|
 | Carte météo de l'électricité 	| A map that will inform in real time about the level of electricity available in the country, thanks to a map of France established by the [Ecowatt](https://www.monecowatt.fr/) device.  Green for a normal situation, orange for a tense electrical situation and red for a very tense situation synonymous with inevitable blackouts if nothing is done to reduce consumption |
 
-<a name="scenario"/></a>
+<!-- <a name="scenario"/></a> -->
 
 ## Scenario/Uses cases
 
@@ -46,7 +55,7 @@ Team : Victor Leroy, Karine Vinette, Thomas Planchard, Paul Nowak</sub>
 **Scenario 2** : Paul is a member of the maintenance team. He would like to know the status of the LEDs and be able to control them remotely to know when to move and intervene. This would avoid unnecessary travel.
 
 
-<a name="risk"/></a>
+<!-- <a name="risk"/></a> -->
 
 ## Risks and assumptions
 ### About the laws
@@ -61,12 +70,15 @@ It will be important to program the LEDs according to the estimates of this card
 <!-- ## Check privacy -->
 
 
-<a name="is-not"/></a>
+<!-- <a name="is-not"/></a> -->
 
-## What the project is not
-This new product do not send information by wifi for security reasons.
+## Non goals
+This version will **not** support the following features:
+- Send information by wifi for security reasons.
+- A product just for the new SignAll panels. It must be compatible with all SignAll panels, both new and old, but also with those of the competition.
+- It must not make the LEDs flash (visible to the naked eye).
 
-<a name="needs"/></a>
+<!-- <a name="needs"/></a> -->
 
 ## Requirements
 The most important points for our customers are its ecological impact, its electricity consumption and a remote controlits electricity consumption. To answer his needs we can develop some features.
@@ -81,7 +93,7 @@ The most important points for our customers are its ecological impact, its elect
 - Send a notification when a led is down <!-- (out of scope) -->
 - Programable light wich light up on various hours <!-- (out of scope) -->
 
-<a name="error"/></a>
+<!-- <a name="error"/></a> -->
 
 ## Error reporting
 If an error occurs, a text will appear in the terminal. The error message may be different depending on the error encountered.
@@ -92,7 +104,7 @@ If an error occurs, a text will appear in the terminal. The error message may be
 | impossible to turn on the light 	| If the user try to turn on the light between 1:00AM and 6:00AM (French time) 	|
 | access denied                   	| Login problem, the password or/and the user job title is not correct         	|
 
-<a name="terminal"/></a>
+<!-- <a name="terminal"/></a> -->
 
 ## Terminal
 Displayed when the terminal is open, the home page serves three purposes:
@@ -102,26 +114,71 @@ Displayed when the terminal is open, the home page serves three purposes:
 
 ### Login
 To more security, to access our project the user needs to connect itself with :
-- user job title (job title section allows for up to 20 characters to be typed.)
+- user (user section allows for up to 20 characters to be typed.)
 - password (The password section allows for up to 12 characters to be typed. To disguise them and prevent hacking, as the user types in the password box, asterisks (*) will appear instead of the characters that they type.)
 
 ### Home page
 To avoid any mistakes we will display the home page according to the login entered.
-- If the user is connected as a member of the maintenance team, he will see the state of all the signages and thier LEDs.
-- If the user is connected as owner of the place where the signage is, he will be able to control the LEDs of his panel. He can not have access to the other brand signage.
-Then they will find all the commands they can use and their description :
+- If the user is connected as a member of the maintenance team, he will see the state of all the signages and their LEDs.
+- If the user is connected as employees of the place where the signage is, he will be able to control the LEDs of his panel ang get some information. He can not have access to the other brand signage.
 
+### Commands
+To control the LEDs and to have access to various information the user will have different commands. After logging in, a summary table of all the commands available for the user and with their description will be visible in the terminal:
+<!-- voire pour ajouter screen du terminal -->
 | Commands 	| Description                        	| Access restricted to           	|
 |----------	|------------------------------------	|--------------------------------	|
-| check    	| Check the state of the LEDs        	| Maintenance team               	|
+| check    	| Check the state of the LEDs and gives some information       	| Maintenance team and the employees of the brand              	|
 | off      	| Turn off the LEDs                  	| The brand where the signage is 	|
 | on       	| Turn on the LEDs                   	| The brand where the signage is 	|
 | up       	| Increase the intensity of the LEDs 	| The brand where the signage is 	|
 | down     	| Decrease the intensity of the LEDs 	| The brand where the signage is 	|
+| prediction  <!--out of scope-->   	| Gives a prediction of the state of the led over the coming months depending on various factors. 	| The brand where the signage is 	|
+| cons    	| Displays a curve of the panel's electricity consumption over the week or month. 	| The brand where the signage is 	|
 
-<!-- suivie de la consommation -> maintenance + restaurant -->
+<!-- mode auto ? -->
 
-<a name="out-of-scope"/></a>
+#### check
+<!-- selected panel or not? -->
+Gives information on the status of the different LED grouping of a selected panel. The following information can be found: 
+- the global status of the panel
+  - panels off because an LED grouping is down
+  - nothing to report
+- the date of the last maintenance (use the **american date format** : mm-dd-yyyy)
+- if there has been any suspicious activity and the source
+  - unintentional shutdown of the panel
+  - higher than average consumption
+
+<!-- screen de la page terminal check -->
+
+#### off
+Turns off the LEDs.
+
+#### on
+Turns on the LEDs, by default it lights up at 50% of their capacity.
+
+#### up
+Increases the intensity of the entire panel. By using this command several times in a row, the panel intensity increases by 10%. It can go up to the maximum capacity of the LEDs, i.e. 100%. 
+
+#### down
+Decreases the intensity of the entire panel. By using this command several times in a row, the panel intensity decreases by 10%. It can go up to the minimum capacity of the LEDs, i.e. 0%. 
+
+#### prediction (out of scope)
+
+
+#### cons
+Using this command, the user can choose between two periods: **"month"** to see consumption for the current month or **"year"** to see consumption for the past year and compare.
+<!-- #### check -->
+
+### Error reporting
+If an error occurs, a text will appear in the terminal. The error message may be different depending on the error encountered.
+
+| Error                           	| Description                                                                  	|
+|---------------------------------	|------------------------------------------------------------------------------	|
+| command not found               	| Can not execute the command                                                  	|
+| impossible to turn on the light 	| If the user try to turn on the light between 1:00AM and 6:00AM (French time) 	|
+| access denied                   	| Login problem, the password or/and the user job title is not correct         	|
+
+<!-- <a name="out-of-scope"/></a> -->
 
 ## Out of scope
 For a better user experience, create a web interface will be easier. It will be used to manage the LEDs and see their states.
@@ -131,4 +188,5 @@ We will use all the features mentioned above to develop our web interface.
 - même interface pour maintenance -> login
 - qui sont les clients et les différences en conséquences 
 - vérifier les entrées du login pour être le plus clair : intitulé du job, entreprise, user title... ?
-        -> changer les "owner" en conséquence-->
+        -> changer les "owner" en conséquence
+- différencier les différents panneaux ?-->
