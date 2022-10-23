@@ -13,5 +13,5 @@ func New() *LoRaE5 {
 	return &LoRaE5{}
 }
 
-func (l *LoRaE5) SendMessage() {
+func (l *LoRaE5) SendNotification() {
 }

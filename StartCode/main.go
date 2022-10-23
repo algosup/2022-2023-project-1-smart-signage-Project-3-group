@@ -20,6 +20,7 @@ func main() {
 }
 
 func blinkSimple(l led.LED) {
+	//Make the LED blink every 100ms
 	for {
 		time.Sleep(time.Millisecond * 100)
 		l.Toggle()
@@ -51,6 +52,7 @@ func blinkWithGoroutine(l led.LED) {
 }
 
 func BrightnessLow(l led.LED) {
+	//make the LED blink every 100ms to decrease its brightness
 	for {
 		time.Sleep(time.Millisecond * 100)
 		l.Toggle()
@@ -58,5 +60,8 @@ func BrightnessLow(l led.LED) {
 		l.Toggle()
 
 	}
+}
 
+func BrightnessHigh(l led.LED) {
+	//set the LED's state to on and increase its brightness
 }

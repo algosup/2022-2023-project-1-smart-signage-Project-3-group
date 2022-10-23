@@ -45,6 +45,6 @@ func (s *Sensor) Off() {
 	s.on = false
 }
 
-func (s *Sensor) GetInfos() {
+func (s *Sensor) GetTension() {
 	return s.Get()
 }

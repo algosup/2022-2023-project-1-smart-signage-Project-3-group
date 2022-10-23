@@ -6,7 +6,7 @@ type Sensor struct {
 }
 
 func FakeSensor() *Sensor {
-	s := &fakePin{on: false}
+	s := &fakePin{on: false, analogValue: 4000, volt: 0}
 
 	sensor := Sensor{
 		sensor: s,
@@ -20,18 +20,21 @@ func (s *Sensor) On() {
 	s.on = true
 }
 
-func (s *Sensor) GetInfos() {
+func (s *Sensor) GetTension() {
 	s.sensor.Read()
 }
 
 type pin interface {
 	Read()
+	ADC()
 	High()
 	Low()
 }
 
 type fakePin struct {
-	on bool
+	on          bool
+	analogValue int
+	volt        float32
 }
 
 func (p *fakePin) High() {
@@ -42,6 +45,14 @@ func (p *fakePin) Low() {
 	p.on = false
 }
 
-func (p *fakePin) Read() {
+func (p *fakePin) Read(float32 volt) {
+	p.volt = ADC(p.analogValue)
+	return p.volt
+
+}
+
+func (int analogValue) ADC(float32 voltage) {
+	voltage := analogValue / 819
+	return volt
 
 }
