@@ -98,7 +98,12 @@ First of all, this project needs hardware to work and this is how you need to co
 - 1 tension sensor 
 - Regular tools for hardware
 
-//IMAGE MONTAGE PLUS EXPLICATION //
+![img](img/IMG_4835.png)
+![img](img/IMG_4836.png)
+![img](img/IMG_4837.png)
+
+
+
 
 Our solution consists in making communicate the Lora-E5 board and the bluepill. The blue pill is the brain of this device. As a reminder, the programm need to be in Go and TinyGo for the bluepill and for the Lora-E5 we can communicate with it only by "AT COMMAND". To communicate between both boards we are going to use the protocole LoRa (refer to the glossary). <br><br>
 **Why use LoRa and LoRaWAN Technologies?** <br>
@@ -126,20 +131,25 @@ LoRa & LoRaWAN combine the best of other technologies, and can be used in a vari
 
 After these explanations about why we use Lora protocole, we are going to explain the different algorithm : 
 
-![img](img/adcfct.png)<br>
-![img](img/blinkfct.png)<br>
-![img](img/brightnesshighfct.png)<br>
-![img](img/brightnesslowfct.png)<br>
-![img](img/configurefct.png)<br>
-![img](img/getledinfofct.png)<br>
-![img](img/gettensionfct.png)<br>
-![img](img/high&lowfct.png)<br>
-![img](img/newrealfct.png)<br>
-![img](img/offfct.png)<br>
-![img](img/onfct.png)<br>
-![img](img/realsensorfct.png)<br>
-![img](img/sendnotificationfct.png)<br>
-![img](img/Togglefct.png)<br>
+
+| Explanation                  | Algorithm     |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Function to configure a new pin | ![img](img/configurefct.png)|
+| Function to lower the brightness of the leds|![img](img/brightnesslowfct.png) |
+| Function to higher the brightness of the leds| ![img](img/brightnesshighfct.png)|
+| Function to blink the led | ![img](img/blinkfct.png)|
+| Function to set up an ADC pin to convert the analog signal to a tension in volts | ![img](img/adcfct.png)|
+| Function to know the state of a led | ![img](img/getledinfofct.png)|
+| Function to know the tension from a tension sensor connected on a ADC pin |![img](img/gettensionfct.png) |
+| Function to swith on or off any kind off pins|![img](img/high&lowfct.png)|
+| Function to set up a new led | ![img](img/newrealfct.png)|
+| Function to swith off th led  |![img](img/offfct.png)<br> |
+| Function to swith on th led | ![img](img/onfct.png)<br>|
+| Function to configure an ADC pin where a tension sensor is plug and return results from the sensor |![img](img/realsensorfct.png)<br> |
+| Function to receive notification from the Lora and function to switch off the light in agreement with the Ecowatt's level | ![img](img/sendnotificationfct.png)<br>|
+| Function to change the state of a led  | ![img](img/Togglefct.png)<br>|
+
+
 
 
 
