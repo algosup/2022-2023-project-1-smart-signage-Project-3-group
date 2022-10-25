@@ -166,10 +166,10 @@ The bluepill is now in bootloader mode and waiting for commands.
 | Function to set up an ADC pin to convert the analog signal to a tension in volts | ![img](img/adcfct.png)|
 | Function to know the state of a led | ![img](img/getledinfofct.png)|
 | Function to know the tension from a tension sensor connected on a ADC pin |![img](img/gettensionfct.png) |
-| Function to swith on or off any kind off pins|![img](img/high&lowfct.png)|
+| Function to switch on or off any kind off pins|![img](img/high&lowfct.png)|
 | Function to set up a new led | ![img](img/newrealfct.png)|
-| Function to swith off th led  |![img](img/offfct.png)<br> |
-| Function to swith on th led | ![img](img/onfct.png)<br>|
+| Function to switch off th led  |![img](img/offfct.png)<br> |
+| Function to switch on th led | ![img](img/onfct.png)<br>|
 | Function to configure an ADC pin where a tension sensor is plug and return results from the sensor |![img](img/realsensorfct.png)<br> |
 | Function to receive notification from the Lora and function to switch off the light in agreement with the Ecowatt's level | ![img](img/sendnotificationfct.png)<br>|
 | Function to change the state of a led  | ![img](img/Togglefct.png)<br>|
