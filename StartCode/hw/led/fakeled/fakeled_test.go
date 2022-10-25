@@ -49,7 +49,7 @@ func TestFakeSign(t *testing.T) {
 	})
 
 	t.Run("creating a new SIGN and changing its fakepin state", func(t *testing.T) {
-		//we create a new LED struct and change its state from Off to On
+		//we create a new SIGN struct and change its state from Off to On
 		newSign := NewFakeSign("neon")
 		newSign.Toggle()
 
@@ -61,4 +61,25 @@ func TestFakeSign(t *testing.T) {
 		}
 	})
 
+}
+
+func TestFakeSignWithFakeLeds(t *testing.T) {
+	//We test functions related to both fake SIGN and fake LED structs
+	t.Run("creating a new SIGN and a new LED part of it", func(t *testing.T) {
+		//We create a new SIGN struct and then a new LED struct part of it
+
+		//sign := NewFakeSign("motherSIGN")
+
+		led := NewFakeLED("daughterLED")
+
+		signWithLEd := []leds{led}
+
+		got := SIGN{signWithLEd}
+
+		want := [{"daugherLED", false}]
+
+		if got != want {
+			t.Errorf("got %#v want %s", got, want)
+		}
+	})
 }
