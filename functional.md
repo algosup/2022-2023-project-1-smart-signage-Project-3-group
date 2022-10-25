@@ -1,10 +1,11 @@
-<font size="150"> Appsolu </font> 
+# Appsolu
 <sub> Last update : October 24, 2022  
 Author : Laura-Lee Hollande
 Team : Victor Leroy, Karine Vinette, Thomas Planchard, Paul Nowak</sub>
 
-<font size="5"> Table of Contents </font>
+ Table of Contents
 
+- [Appsolu](#appsolu)
 - [Introduction](#introduction)
 - [Glossary](#glossary)
 - [Scenario/Uses cases](#scenariouses-cases)
