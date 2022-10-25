@@ -9,7 +9,7 @@ func TestFakeled(t *testing.T) {
 
 	t.Run("creating a new LED", func(t *testing.T) {
 		//We create a new LED struct and read the state of its "on" bool
-		light := NewFake()
+		light := NewFakeLED()
 		got := light.String()
 		want := "LED: Off"
 
@@ -20,7 +20,7 @@ func TestFakeled(t *testing.T) {
 
 	t.Run("creating a new LED and changing its state", func(t *testing.T) {
 		//we create a new LED struct and change its state from Off to On
-		newLed := NewFake()
+		newLed := NewFakeLED()
 		newLed.Toggle()
 
 		got := newLed.String()
@@ -30,5 +30,17 @@ func TestFakeled(t *testing.T) {
 			t.Errorf("got %s want %s", got, want)
 		}
 	})
+
+}
+
+func TestFakeSign(t *testing.T) {
+	//We create a new LED struct and read the state of its "on" bool
+	sign := NewFakeSign()
+	got := sign.String()
+	want := "SIGN: Off"
+
+	if got != want {
+		t.Errorf("got %s want %s", got, want)
+	}
 
 }

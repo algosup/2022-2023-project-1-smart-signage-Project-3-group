@@ -1,11 +1,30 @@
 package fakeled
 
+type SIGN struct {
+	signName string
+	leds     []LED
+	output   pin
+	pinState bool
+}
+
 type LED struct { //LED struct with its pin and its state
 	led pin
 	on  bool
 }
 
-func NewFake() *LED { //Create a fakeLED with its fakepin associated
+func NewFakeSign() *SIGN { //Create a fakeSIGN with its fakepin associated
+
+	s := &fakePin{on: false}
+
+	sign := SIGN{
+		signName: "neon",
+		output:   s,
+		pinState: s.on,
+	}
+	return &sign
+}
+
+func NewFakeLED() *LED { //Create a fakeLED
 
 	l := &fakePin{on: false}
 
@@ -14,6 +33,18 @@ func NewFake() *LED { //Create a fakeLED with its fakepin associated
 		on:  false,
 	}
 	return &led
+}
+
+func (s *SIGN) String() string {
+	//display the fake SIGN's state
+	var onStr string
+	if s.pinState {
+		onStr = "On"
+	} else {
+		onStr = "Off"
+	}
+
+	return "SIGN: " + onStr
 }
 
 func (l *LED) String() string {
@@ -41,7 +72,7 @@ func (l *LED) Off() {
 }
 
 func (l *LED) Toggle() {
-	//change the fakepin state
+	//change the fakeLED state
 	if !l.on {
 		// if its pin state is false, switch it to true
 		l.On()

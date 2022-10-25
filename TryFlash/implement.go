@@ -6,11 +6,10 @@ import (
 	//"github.com/tinygo-org/tinygo/src/machine"
 
 	"machine"
-
 )
 
 func main() {
-	led := machine.LED
+	led := machine.PA7
 	led.Configure(machine.PinConfig{Mode: machine.PinOutput})
 	for {
 		led.High()
