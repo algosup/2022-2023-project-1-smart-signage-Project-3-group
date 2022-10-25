@@ -8,13 +8,18 @@ Team : Victor Leroy, Karine Vinette, Thomas Planchard, Paul Nowak</sub>
 - [Introduction](#introduction)
 - [Glossary](#glossary)
 - [Scenario/Uses cases](#scenariouses-cases)
+  - [Anya Manya - Owner of a Burger King](#anya-manya---owner-of-a-burger-king)
+  - [Oscar Pali - Maintenance technician at SignAll](#oscar-pali---maintenance-technician-at-signall)
+  - [Kévin Ohama - Employee at Burger King](#kévin-ohama---employee-at-burger-king)
+  - [Katia Soneta - Works at SignAll](#katia-soneta---works-at-signall)
+  - [Clarisse Polia - Citizen](#clarisse-polia---citizen)
 - [Risks and assumptions](#risks-and-assumptions)
   - [About the laws](#about-the-laws)
 - [Non goals](#non-goals)
 - [Requirements](#requirements)
 - [Terminal](#terminal)
   - [Commands](#commands)
-    - [check](#check)
+    - [check command](#check-command)
     - [off command](#off-command)
     - [on command](#on-command)
     - [up command](#up-command)
@@ -40,26 +45,40 @@ Team : Victor Leroy, Karine Vinette, Thomas Planchard, Paul Nowak</sub>
 
 # Scenario/Uses cases
 
-<!-- Patrick Pop is the owner of Burger King restaurant in Bourges and have a signage on his restaurant. He wants to reduce his electricity consumption to save money. He needs to control and see how much electricity is consummed.-->
-<img width="1133" alt="personae-oscar" src="https://user-images.githubusercontent.com/71769490/197851394-2eae68e7-f02d-42cc-997e-2709795f705c.png">
+## Anya Manya - Owner of a Burger King
+<img width="1133" alt="personae-Anya" src="https://user-images.githubusercontent.com/71769490/197859835-fdf93644-0433-4d6c-9a73-7596f2171acd.png">
 
+**Use case :** Anya Manya is the owner of Burger King restaurant. She is very involved in her restaurant and likes to keep an eye on everything. This winter she would like to reduce her electricity consumption to save money. She thinks the signages in her restaurant is a good idea to save money by dimming the lights or turning them off at off-peak times. Knowing the state of the signages and their consumption are key elements in the management of her business in order to act accordingly and not lose money. In addition, she could reduce the light pollution of its establishment.
 
-**Scenario 1** : Patrick is the owner of a Burger King restaurant. He is concerned about the environment and wants to save energy this winter. He would like to be able to control the consumption of his signs and add options to save money. 
+## Oscar Pali - Maintenance technician at SignAll
+<img width="1133" alt="personae-oscar" src="https://user-images.githubusercontent.com/71769490/197859864-5d5dcbd4-cc65-4a0a-9473-6064bedcde21.png">
 
-**Scenario 2** : Paul is a member of the maintenance team. He would like to know the status of the LEDs and be able to control them remotely to know when to move and intervene. This would avoid unnecessary travel.
+**Use case :** Oscar Pali has just become a father and makes his child his priority. He would like to spend less time on the roads and only move when he is sure that there is a need for maintenance. He could work from home and have an overview of the signages in his area and therefore anticipate maintenance operations.
+
+## Kévin Ohama - Employee at Burger King
+<img width="1133" alt="personae-kevin" src="https://user-images.githubusercontent.com/71769490/197868262-67a9b1a8-d84c-4529-9a6f-0c9442f4ca61.png">
+
+**Use case :** Kévin Ohama is a student who works to pay his study. he had a lot of responsabilies in his work like the signages management which is manage manually. He does not have lot of knowledge in technologies so he will need a little formation if the way to manage all the signages will change.
+
+## Katia Soneta - Works at SignAll
+<img width="1133" alt="personae-katia" src="https://user-images.githubusercontent.com/71769490/197868287-be392e1a-9ecc-433d-8157-c0cc12ed2421.png">
+
+**Use case :** Katia Soneta works at SignAll and she is very implicated in the development of the brand. Her first goal is to earn new customer for SignAll, for that she needs to offer something different and usefull for the potentials customers.
+
+## Clarisse Polia - Citizen
+<img width="1133" alt="personae-clarisse" src="https://user-images.githubusercontent.com/71769490/197873007-0800e75c-03e1-4dc6-9fb4-95133dfa32c5.png">
+
+**Use case :** Clarisse Polia has just arrived in Lamotte Beuvron, she has no mark in the city and is a little bit lost. She walks a lot around the city to discover new place. For her, signage is very important because it is the only thing which serves as a reference point that is why she does not like when a signage does not work correctly ("Burger King" who becomes "Brger Kin" for example).
 
 # Risks and assumptions
 ## About the laws
 In France, according to the law the LEDs must be off during the night, between 1:00AM and 6:00AM (French time).
-
-<!-- ## Need to verify what the law tells about this type of project. -->
 
 # Non goals
 This version will **not** support the following features:
 - Send information by wifi for security reasons.
 - A product just for the new SignAll panels. It must be compatible with all SignAll panels, both new and old, but also with those of the competition.
 - It must not make the LEDs flash (visible to the naked eye).
-
 
 # Requirements
 The most important points for our customers are its ecological impact, its electricity consumption and a remote controlits electricity consumption. To answer his needs we can develop some features.
@@ -77,16 +96,9 @@ Displayed when the terminal is open:
 
 ## Commands
 To control the LEDs and to have access to various information the user will have different commands. After logging in and select a signage, a summary table of all the commands available for the user and with their description will be visible in the terminal:
-<!-- voire pour ajouter screen du terminal -->
-| Commands 	| Description                        	| Access restricted to           	|
-|----------	|------------------------------------	|--------------------------------	|
-| check    	| Check the state of the LEDs and gives some information       	| Maintenance team and the employees of the brand              	|
-| off      	| Turn off the LEDs                  	| The brand where the signage is 	|
-| on       	| Turn on the LEDs                   	| The brand where the signage is 	|
-| up       	| Increase the intensity of the LEDs 	| The brand where the signage is 	|
-| down     	| Decrease the intensity of the LEDs 	| The brand where the signage is 	|
 
-### check
+
+### check command
 Gives information on the status of the different LED grouping of a selected panel. The following information can be found: 
 - if the panel is currently on or off
 - the global status of the panel
@@ -99,20 +111,32 @@ Gives information on the status of the different LED grouping of a selected pane
   - overheating
 - give a prediction of the state of the LEDs over a month
   - can be impacted by the weather
-
-<!-- screen de la page terminal check -->
+Accessible by employees and the maintenance team.
 
 ### off command
 Turns off the LEDs.
+Accessible by employees and the maintenance team.
 
 ### on command
 Turns on the LEDs, by default it lights up at 50% of their capacity.
+Accessible by employees and the maintenance team.
 
 ### up command
 Increases the intensity of the entire panel. By using this command several times in a row, the panel intensity increases by 10%. It can go up to the maximum capacity of the LEDs, i.e. 100%. 
+Accessible by employees and the maintenance team.
 
 ### down command
 Decreases the intensity of the entire panel. By using this command several times in a row, the panel intensity decreases by 10%. It can go up to the minimum capacity of the LEDs, i.e. 0%. 
+Accessible by employees and the maintenance team.
+
+Here a summary of all orders for this version of the project:
+| Commands 	| Description                        	| Access restricted to           	|
+|----------	|------------------------------------	|--------------------------------	|
+| check    	| Check the state of the LEDs and gives some information       	| Employees and the maintenance team             	|
+| off      	| Turn off the LEDs                  	| Employees and the maintenance team 	|
+| on       	| Turn on the LEDs                   	| Employees and the maintenance team 	|
+| up       	| Increase the intensity of the LEDs 	| Employees and the maintenance team 	|
+| down     	| Decrease the intensity of the LEDs 	| Employees and the maintenance team 	|
 
 ## Error reporting
 If an error occurs, a text will appear in the terminal. The error message may be different depending on the error encountered.
@@ -121,8 +145,7 @@ If an error occurs, a text will appear in the terminal. The error message may be
 |---------------------------------	|------------------------------------------------------------------------------	|
 | command not found               	| Can not execute the command                                                  	|
 | impossible to turn on the light 	| If the user try to turn on the light between 1:00AM and 6:00AM (French time) 	|
-| access denied                   	| Login problem, the password or/and the user job title is not correct         	|
-
+| on-going maintenance 	| maintenance is in progress, the panel cannot be used. 	|
 
 # Out of scope
 Other features can be implemented in the module for a better control of the module, energy and to reduce its ecological impact.
@@ -144,4 +167,3 @@ With a command (cons for exemple), the user can choose between two periods: **"m
 Programable light could be an idea for the company where the signage is, the employees could choose a time period when the signage need to be turn on and avoid the case that an employee miss to turn off the signge during the night. 
 To see further we can imagine an auto mode, the signage will be able to lights from external information like the weather, the the use of the site <!--(fréquentation du lieu)--> or the luminosity. This could be possible thanks to different sensors.
 
-<!-- 0.72W max led -->
