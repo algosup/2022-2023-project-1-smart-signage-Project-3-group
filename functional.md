@@ -41,7 +41,9 @@ Team : Victor Leroy, Karine Vinette, Thomas Planchard, Paul Nowak</sub>
 # Scenario/Uses cases
 
 <!-- Patrick Pop is the owner of Burger King restaurant in Bourges and have a signage on his restaurant. He wants to reduce his electricity consumption to save money. He needs to control and see how much electricity is consummed.-->
-[Personae-Oscar.pdf](https://github.com/algosup/2022-2023-project-1-smart-signage-Project-3-group/files/9862849/Personae-Oscar.pdf)
+<img width="1133" alt="personae-oscar" src="https://user-images.githubusercontent.com/71769490/197851394-2eae68e7-f02d-42cc-997e-2709795f705c.png">
+
+
 **Scenario 1** : Patrick is the owner of a Burger King restaurant. He is concerned about the environment and wants to save energy this winter. He would like to be able to control the consumption of his signs and add options to save money. 
 
 **Scenario 2** : Paul is a member of the maintenance team. He would like to know the status of the LEDs and be able to control them remotely to know when to move and intervene. This would avoid unnecessary travel.
