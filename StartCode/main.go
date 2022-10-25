@@ -11,7 +11,7 @@ import (
 func main() {
 	var light led.LED
 
-	light = fakeled.NewFake()
+	light = fakeled.NewFakeLED()
 	ledStr := light.String()
 	println(ledStr)
 
@@ -74,6 +74,6 @@ func BrightnessHigh(l led.LED) {
 	//set the LED's state to on and increase its brightness
 }
 
-func GetLedIngo(l led.LED) {
+func GetLedInfo(l led.LED) {
 
 }

@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	led := machine.PA7
+	led := machine.PC13
 	led.Configure(machine.PinConfig{Mode: machine.PinOutput})
 	for {
 		led.High()
