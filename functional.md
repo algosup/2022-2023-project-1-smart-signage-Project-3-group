@@ -1,5 +1,5 @@
 # Appsolu
-<sub> Last update : October 24, 2022  
+<sub> Last update : October 25, 2022  
 Author : Laura-Lee Hollande
 Team : Victor Leroy, Karine Vinette, Thomas Planchard, Paul Nowak</sub>
 
@@ -74,6 +74,7 @@ Team : Victor Leroy, Karine Vinette, Thomas Planchard, Paul Nowak</sub>
 # Risks and assumptions
 ## About the laws
 In France, according to the law the LEDs must be off during the night, between 1:00AM and 6:00AM (French time).
+In France, According to the law it is forbidden to flash the signs (visible to the naked eye).
 
 # Non goals
 This version will **not** support the following features:
