@@ -34,7 +34,7 @@ Author: Thomas Planchard
 <br>
 Team: Karine Vinette, Paul Nowak, Victor Leroy, Laura-Lee Hollande, Thomas Planchard
 <br>
-Last updated : 24/10/2022
+Last updated : 25/10/2022
 <br>
 Bug Tracker by Victor Leroy : https://docs.google.com/spreadsheets/d/12PCz3j1eYLg3Uv70rVtRlU4je5LbpEMlmCV1WTYXLxg/edit?usp=sharing
 
