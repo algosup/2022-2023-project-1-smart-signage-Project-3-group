@@ -34,7 +34,7 @@ Author: Thomas Planchard
 <br>
 Team: Karine Vinette, Paul Nowak, Victor Leroy, Laura-Lee Hollande, Thomas Planchard
 <br>
-Last updated : 
+Last updated : 24/10/2022
 <br>
 Bug Tracker by Victor Leroy : https://docs.google.com/spreadsheets/d/12PCz3j1eYLg3Uv70rVtRlU4je5LbpEMlmCV1WTYXLxg/edit?usp=sharing
 
@@ -98,11 +98,21 @@ First of all, this project needs hardware to work and this is how you need to co
 - 1 tension sensor 
 - Regular tools for hardware
 
-![img](img/IMG_4835.png)
+Connect the TX pin of the converter to PA10 of the BluePill<br>
+Connect the RX pin of the converter to PA9 of the BluePill<br>
+Connect the 3.3v pin of the converter to 3.3v of the BluePill<br>
+Connect the GND pin of the converter to GND of the BluePill
+
+![img](img/montage.png)
 ![img](img/IMG_4836.png)
 ![img](img/IMG_4837.png)
 
+**Activate the flash mode**<br>
+Set the BOOT0 jumper to 1<br>
+Set the jumper BOOT1 to 0<br>
+Briefly press the Reset button and release.<br>
 
+The bluepill is now in bootloader mode and waiting for commands.
 
 
 Our solution consists in making communicate the Lora-E5 board and the bluepill. The blue pill is the brain of this device. As a reminder, the programm need to be in Go and TinyGo for the bluepill and for the Lora-E5 we can communicate with it only by "AT COMMAND". To communicate between both boards we are going to use the protocole LoRa (refer to the glossary). <br><br>
@@ -129,7 +139,22 @@ LoRa & LoRaWAN combine the best of other technologies, and can be used in a vari
 
 
 
-After these explanations about why we use Lora protocole, we are going to explain the different algorithm : 
+After these explanations about why we use Lora protocole, we are going to explain the different algorithm. <br>
+Just before we will explain how to flash the bluepill
+
+**Connection**<br>
+Connect the TX pin of the converter to PA10 of the BluePill<br>
+Connect the RX pin of the converter to PA9 of the BluePill<br>
+Connect the 3.3v pin of the converter to 3.3v of the BluePill<br>
+Connect the GND pin of the converter to GND of the BluePill
+
+**Activate the flash mode**<br>
+Set the BOOT0 jumper to 1<br>
+Set the jumper BOOT1 to 0<br>
+Briefly press the Reset button and release.<br>
+
+The bluepill is now in bootloader mode and waiting for commands.
+
 
 
 | Explanation                  | Algorithm     |
