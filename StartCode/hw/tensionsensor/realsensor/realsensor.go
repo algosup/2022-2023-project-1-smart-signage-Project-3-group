@@ -3,6 +3,7 @@ package realsensor
 import "machine"
 
 type Sensor struct {
+	//Sensor struct with the chosen ADC pin and its state
 	sensor machine.ADC
 	on     bool
 }
@@ -36,15 +37,18 @@ func RealSensor() *Sensor {
 }
 
 func (s *Sensor) On() {
+	//set the sensor's state to High
 	s.sensor.High()
 	s.on = true
 }
 
 func (s *Sensor) Off() {
+	//set the sensor's state to Low
 	s.sensor.Low()
 	s.on = false
 }
 
 func (s *Sensor) GetTension() {
+	//get the tension on a given pin
 	return s.Get()
 }

@@ -2,13 +2,13 @@
 
 package lorae5
 
-import {
-	"machine"
+import (
 	"log"
-}
+	"machine"
+)
 
 type LoRaE5 struct {
-	uart machine.UART2
+	uart *machine.UART
 	on   bool
 }
 
@@ -25,22 +25,23 @@ func NewLorae5() *LoRaE5 {
 		uart: serial2,
 	}
 
-	return &LoRaE5
+	return &lorae5
 }
 
-func (l *LoRaE5) Reader() (n int, err error) {
-	l.uart.Read()
-
-}
-
-func (l *LoRaE5) Writer() (n int, err error) {
-	l.uart.Write()
+func (l *LoRaE5) Reader(data []byte) (n int, err error) {
+	l.uart.Read(data)
+	return n, err
 
 }
 
-func SendNotification(data []byte) string{
-	if data == "AT+"
-	{
+func (l *LoRaE5) Writer(data []byte) (n int, err error) {
+	l.uart.Write(data)
+	return n, err
+
+}
+
+func SendNotification(data []byte) {
+	if string(data) == "AT+" {
 		log.Println("+AT OK")
 	}
 }

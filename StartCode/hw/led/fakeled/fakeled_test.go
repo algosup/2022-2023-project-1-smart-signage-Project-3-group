@@ -72,14 +72,18 @@ func TestFakeSignWithFakeLeds(t *testing.T) {
 
 		led := NewFakeLED("daughterLED")
 
-		signWithLEd := []leds{led}
+		signWithLEd := SIGN{leds: led}
 
-		got := SIGN{signWithLEd}
+		got := signWithLEd
 
-		want := [{"daugherLED", false}]
+		want := SIGN[{"daugherLED", false}]
 
 		if got != want {
 			t.Errorf("got %#v want %s", got, want)
 		}
 	})
+
+	t.Run("creating a new SIGN and with a few new leds", func(t *testing.T)
+
+	t.Run("creating a new SIGN with new leds off, and toggle the sign to turn them on", func(t *testing.T)
 }
