@@ -19,7 +19,7 @@ Team : Victor Leroy, Karine Vinette, Thomas Planchard, Paul Nowak</sub>
 - [Non goals](#non-goals)
 - [Requirements](#requirements)
 - [Terminal](#terminal)
-  - [Commands](#commands)
+  - [Features](#features)
     - [check command](#check-command)
     - [off command](#off-command)
     - [on command](#on-command)
@@ -96,7 +96,7 @@ The most important points for our customers are its ecological impact, its elect
 Displayed when the terminal is open:
 - Commands page
 
-## Commands
+## Features
 To control the LEDs and to have access to various information the user will have different commands. After logging in and select a signage, a summary table of all the commands available for the user and with their description will be visible in the terminal:
 
 
