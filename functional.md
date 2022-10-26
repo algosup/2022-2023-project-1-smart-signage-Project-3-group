@@ -35,14 +35,14 @@ Team : Victor Leroy, Karine Vinette, Thomas Planchard, Paul Nowak</sub>
 [SignAll](https://signall.com/), in Vierzon needs a new connected product able to know the state and control the LED's remotly. The objective with this project is to enable the company to save on electricity, reduce its ecological footprint and limited unnecessary travel.
 
 # Glossary
-| Word                         	| Definition                                                                                                                                                                                                                                                                                                                                                                      	|
-|------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| Gateway                      	| It is a piece of networking hardware or software used in telecommunications networks that allows data to flow from one discrete network to another                                                                                                                                                                                                                              	|
-| LEDs                         	| It is a semiconductor light source that emits light when current flows through it.  Consumes 10 times less electricity than an incandescent bulb and 6 to 8 times less than a halogen bulb                                                                                                                                                                                      	|
-| Signage                      	| Commercial or public display signs                                                                                                                                                                                                                                                                                                                                              	|
-| Carte météo de l'électricité 	| A map that will inform in real time about the level of electricity available in the country, thanks to a map of France established by the [Ecowatt](https://www.monecowatt.fr/) device.  Green for a normal situation, orange for a tense electrical situation and red for a very tense situation synonymous with inevitable blackouts if nothing is done to reduce consumption |
-| Lux | It is the unit of illuminance in the International System of Units |
-| LoRa  | LoRa (short for long range) is a spread spectrum modulation technique derived from chirp spread spectrum (CSS) technology. LoRa is a long range, low power wireless platform that became the de facto wireless platform of Internet of Things (IoT). |
+| Word                                                     	| Definition                                                                                                                                                                                                                                                                                                                                                                      	|
+|----------------------------------------------------------	|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
+| Gateway                                                  	| It is a piece of networking hardware or software used in telecommunications networks that allows data to flow from one discrete network to another                                                                                                                                                                                                                              	|
+| LEDs                                                     	| It is a semiconductor light source that emits light when current flows through it.  Consumes 10 times less electricity than an incandescent bulb and 6 to 8 times less than a halogen bulb                                                                                                                                                                                      	|
+| Signage                                                  	| Commercial or public display signs                                                                                                                                                                                                                                                                                                                                              	|
+| Electricity weather map ("Carte météo de l'électricité") 	| A map that will inform in real time about the level of electricity available in the country, thanks to a map of France established by the [Ecowatt](https://www.monecowatt.fr/) device.  Green for a normal situation, orange for a tense electrical situation and red for a very tense situation synonymous with inevitable blackouts if nothing is done to reduce consumption 	|
+| Lux                                                      	| It is the unit of illuminance in the International System of Units                                                                                                                                                                                                                                                                                                              	|
+| LoRa                                                     	| LoRa (short for long range) is a spread spectrum modulation technique derived from chirp spread spectrum (CSS) technology. LoRa is a long range, low power wireless platform that became the de facto wireless platform of Internet of Things (IoT).                                                                                                                            	|
 
 # Scenario/Uses cases
 
@@ -132,22 +132,24 @@ Decreases the intensity of the entire panel. By using this command several times
 Accessible by employees and the maintenance team.
 
 Here a summary of all orders for this version of the project:
-| Commands 	| Description                        	| Access restricted to           	|
-|----------	|------------------------------------	|--------------------------------	|
-| check    	| Check the state of the LEDs and gives some information       	| Employees and the maintenance team             	|
-| off      	| Turn off the LEDs                  	| Employees and the maintenance team 	|
-| on       	| Turn on the LEDs                   	| Employees and the maintenance team 	|
-| up       	| Increase the intensity of the LEDs 	| Employees and the maintenance team 	|
-| down     	| Decrease the intensity of the LEDs 	| Employees and the maintenance team 	|
+| Commands 	| Description                                            	| Access restricted to               	|
+|----------	|--------------------------------------------------------	|------------------------------------	|
+| check    	| Check the state of the LEDs and gives some information 	| Employees and the maintenance team 	|
+| off      	| Turn off the LEDs                                      	| Employees and the maintenance team 	|
+| on       	| Turn on the LEDs                                       	| Employees and the maintenance team 	|
+| up       	| Increase the intensity of the LEDs                     	| Employees and the maintenance team 	|
+| down     	| Decrease the intensity of the LEDs                     	| Employees and the maintenance team 	|
 
 ## Error reporting
 If an error occurs, a text will appear in the terminal. The error message may be different depending on the error encountered.
 
-| Error                           	| Description                                                                  	|
-|---------------------------------	|------------------------------------------------------------------------------	|
-| command not found               	| Can not execute the command                                                  	|
-| impossible to turn on the light 	| If the user try to turn on the light between 1:00AM and 6:00AM (French time) 	|
-| on-going maintenance 	| maintenance is in progress, the panel cannot be used. 	|
+| Error                           	| Description                                                                  	| Access restricted to               	|
+|---------------------------------	|------------------------------------------------------------------------------	|------------------------------------	|
+| command not found               	| Can not execute the command                                                  	| Employees and the maintenance team 	|
+| impossible to turn on the light 	| If the user try to turn on the light between 1:00AM and 6:00AM (French time) 	| Employees and the maintenance team 	|
+| on-going maintenance            	| maintenance is in progress, the panel cannot be used.                        	| Employees and the maintenance team 	|
+| up                              	| Increase the intensity of the LEDs                                           	| Employees and the maintenance team 	|
+| down                            	| Decrease the intensity of the LEDs                                           	| Employees and the maintenance team 	|
 
 # Out of scope
 Other features can be implemented in the module for a better control of the module, energy and to reduce its ecological impact.
