@@ -23,6 +23,7 @@ func NewLorae5() *LoRaE5 {
 }
 
 func (l *LoRaE5) Join() error {
+	//allow the bluepill to send commands with a message to the lorae5
 	_, err := l.uart.Write([]byte("AT+JOIN\r\n"))
 	msg1 := ""
 
@@ -45,8 +46,7 @@ func (l *LoRaE5) Join() error {
 		}
 	}
 	println(msg1)
-	//err = nil
-	l.uart.Write([]byte("AT+MSG=\"Hello Louis\"\r\n"))
+	l.uart.Write([]byte("AT+MSG=\"Hello Thomas\"\r\n"))
 	return nil
 }
 

@@ -11,29 +11,28 @@ import (
 
 func main() {
 
-	//var light led.LED
+	//Main program
+	//connect to a real LED and create a 45 seconds loop with different orders
 
 	var light = realled.NewReal()
 
 	for {
+		//Switch on the LEDS for 15 seconds
 		light.On()
 		time.Sleep(15 * time.Second)
+		//Switch off the LEDS for 15 seconds
 		light.Off()
 		time.Sleep(15 * time.Second)
+		//Switch on the LEDS for 15 seconds and reduce its brightness
 		light.On()
 		BrightnessLow(light)
 		time.Sleep(15 * time.Second)
 	}
 
-	//var light led.LED
-
-	//light = fakeled.NewFakeLED()
-	//ledStr := light.String()
-	//println(ledStr)
-
 }
 
 func SerialSend(serial goio.Writer, atCommand string) error {
+	//Send an AT command to the lorae5
 
 	for len(atCommand) > 0 {
 
@@ -66,6 +65,7 @@ func blinkSimple(l led.LED) {
 }
 
 func blinkWithGoroutine(l led.LED) {
+	//blink a led every 100ms by using a goroutine
 	ledCtrl := make(chan bool, 10)
 
 	go func() {

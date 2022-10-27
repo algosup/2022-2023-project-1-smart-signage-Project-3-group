@@ -1,18 +1,21 @@
 package fakeled
 
 type SIGN struct {
+	//SIGN struct with its name, the leds it contains, its fake output and its state
 	signName string
 	leds     []LED
 	output   pin
 	pinState bool
 }
 
-type LED struct { //LED struct with its pin and its state
+type LED struct {
+	//LED struct with its name and its state
 	ledName string
 	on      bool
 }
 
-func NewFakeSign(nameString string) *SIGN { //Create a fakeSIGN with its fakepin associated
+func NewFakeSign(nameString string) *SIGN {
+	//Create a fakeSIGN with its fakepin associated
 
 	s := &fakePin{on: false}
 
@@ -24,7 +27,8 @@ func NewFakeSign(nameString string) *SIGN { //Create a fakeSIGN with its fakepin
 	return &sign
 }
 
-func NewFakeLED(nameLed string) *LED { //Create a fakeLED
+func NewFakeLED(nameLed string) *LED {
+	//Create a fakeLED set on false
 
 	led := LED{
 		ledName: nameLed,
@@ -108,7 +112,7 @@ type pin interface {
 }
 
 type fakePin struct {
-	//create a struct which simulates a fake pin for a fake LED with a "on" bool for designing its state
+	//create a struct which simulates a fake pin for a fake SIGN with a "on" bool for designing its state
 	on bool
 }
 
