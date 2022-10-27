@@ -98,5 +98,6 @@ func BrightnessHigh(l led.LED) {
 }
 
 func GetLedInfo(l led.LED) {
+	//get the LED's state
 
 }
