@@ -25,6 +25,11 @@ func NewLorae5() *LoRaE5 {
 func (l *LoRaE5) Join() error {
 	_, err := l.uart.Write([]byte("AT+JOIN\r\n"))
 	msg1 := ""
+
+	if err != nil {
+		return err
+	}
+
 	for {
 		if l.uart.Buffered() > 0 {
 			rb, err := l.uart.ReadByte()
@@ -40,9 +45,9 @@ func (l *LoRaE5) Join() error {
 		}
 	}
 	println(msg1)
-	err = nil
+	//err = nil
 	l.uart.Write([]byte("AT+MSG=\"Hello Louis\"\r\n"))
-	return err
+	return nil
 }
 
 func (l *LoRaE5) Reader(data []byte) (n int, err error) {

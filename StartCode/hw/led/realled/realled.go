@@ -10,7 +10,7 @@ type LED struct { //LED struct with the chosen pin and its state
 }
 
 func NewReal() *LED { //detect a new LED and configure the chosen pin as its output
-	l := machine.LED
+	l := machine.PC13
 	l.Configure(machine.PinConfig{Mode: machine.PinOutput})
 
 	led := LED{

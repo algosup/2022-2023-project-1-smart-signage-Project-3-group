@@ -5,25 +5,32 @@ import (
 	"log"
 	"time"
 
-	"github.com/algosup/2022-2023-project-1-smart-signage-Project-3-group/StartCode/hw/io"
 	"github.com/algosup/2022-2023-project-1-smart-signage-Project-3-group/StartCode/hw/led"
+	"github.com/algosup/2022-2023-project-1-smart-signage-Project-3-group/StartCode/hw/led/realled"
 )
 
 func main() {
 
-	badSerial := io.NewSlowWriter(3)
-	err := SerialSend(badSerial, "AT+JOIN")
-	if err != nil {
-		log.Fatal(err)
+	//var light led.LED
+
+	var light = realled.NewReal()
+
+	for {
+		light.On()
+		time.Sleep(15 * time.Second)
+		light.Off()
+		time.Sleep(15 * time.Second)
+		light.On()
+		BrightnessLow(light)
+		time.Sleep(15 * time.Second)
 	}
+
 	//var light led.LED
 
 	//light = fakeled.NewFakeLED()
 	//ledStr := light.String()
 	//println(ledStr)
 
-	// blinkSimple(l)
-	//blinkWithGoroutine(l)
 }
 
 func SerialSend(serial goio.Writer, atCommand string) error {
