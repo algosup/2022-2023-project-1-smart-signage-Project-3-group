@@ -28,5 +28,5 @@ https://www.oflabs.com/hello-word-avec-tinygo-et-bluepill/
 
 ## Documents
 
-- [Functional Specifications]
+- [Functional Specifications](https://github.com/algosup/2022-2023-project-1-smart-signage-Project-3-group/blob/main/Documents/functional.md)
 - [Technical Specifications](https://github.com/algosup/2022-2023-project-1-smart-signage-Project-3-group/blob/main/Documents/Technical.md)
