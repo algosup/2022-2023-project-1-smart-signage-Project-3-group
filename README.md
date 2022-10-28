@@ -7,7 +7,7 @@ Total, etc. to name a few.<br>
 - [Project Description](https://github.com/algosup/2022-2023-project-1-smart-signage-Project-3-group/blob/main/Documents/2022-2023-project-1-smart-signage.pdf)
 
 <strong>Roles Team :</strong><br> Karine (Project manager), Laura-Lee (Program manager), Paul N (software engineer), Thomas (Tech lead), Victor (QA)<br>
-- [Project Roles](https://github.com/algosup/2022-2023-project-1-smart-signage-Project-3-group/blob/main/Documents/Project_roles.pdf)
+
 
 Management:<br>
 https://trello.com/b/4zrAV4Ol/group3-light-pannels-project
